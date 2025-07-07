@@ -1,0 +1,12 @@
+@startuml
+actor Frontend
+participant "Spring Boot\n(Controller/Service/Repository)" as SpringBoot
+database "Base de données" as DB
+
+Frontend -> SpringBoot : GET/POST/PUT/PATCH/DELETE /pathRestController \n(données utilisateur)
+SpringBoot -> SpringBoot : Valide la requête
+SpringBoot -> SpringBoot : Logique métier (calcul, vérification, mapping/conversion DTO to ENTITY, etc.)
+SpringBoot -> DB : Lecture/écriture des données\n(JPA/ORM)
+DB --> SpringBoot : Résultat (données ENTITY to DTO, confirmation)
+SpringBoot -> Frontend : DTO (JSON)
+@enduml

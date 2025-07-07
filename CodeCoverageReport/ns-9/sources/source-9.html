@@ -1,0 +1,182 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > UserRestController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.web.rest</a>
+</div>
+
+<h1>Coverage Summary for Class: UserRestController (org.nejjari.hanae.gameup.web.rest)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">UserRestController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/4)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.web.rest;
+&nbsp;
+&nbsp;import org.nejjari.hanae.gameup.business.UserService;
+&nbsp;import org.nejjari.hanae.gameup.dto.UserDto;
+&nbsp;import org.nejjari.hanae.gameup.web.SuperRestController;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.web.bind.annotation.*;
+&nbsp;
+&nbsp;/**
+&nbsp; * REST controller for managing User entities.
+&nbsp; * &lt;p&gt;
+&nbsp; * This controller provides endpoints for user-related operations such as login verification,
+&nbsp; * retrieving users by name, and checking for user existence.
+&nbsp; * It extends the generic SuperRestController to inherit standard RESTful behavior.
+&nbsp; * &lt;/p&gt;
+&nbsp; *
+&nbsp; * @RestController indicates that this class is a RESTful web service controller.
+&nbsp; * @RequestMapping(&quot;/user&quot;) maps HTTP requests to /user to this controller.
+&nbsp; */
+&nbsp;@RestController
+&nbsp;@RequestMapping(UserRestController.BASE_PATH)
+&nbsp;public class UserRestController extends SuperRestController&lt;UserDto, UserService&gt; {
+&nbsp;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The base path for this controller.
+&nbsp;     */
+&nbsp;    public static final String BASE_PATH =  &quot;/user&quot;;
+&nbsp;    public static final String BASE_PATH_VERIFY_LOGIN = &quot;/verify&quot;;
+&nbsp;    public static final String BASE_PATH_GET_BY_NOM = &quot;/get-by-nom&quot;;
+&nbsp;    public static final String BASE_PATH_EXIST_BY_NOM = &quot;/exist-by-nom&quot;;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Constructs a UserRestController with the specified UserService.
+&nbsp;     *
+&nbsp;     * @param service the UserService used to handle business logic for User entities
+&nbsp;     */
+&nbsp;    @Autowired
+&nbsp;    protected UserRestController(UserService service) {
+<b class="fc">&nbsp;        super(service);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Verifies the login credentials of a user.
+&nbsp;     *
+&nbsp;     * @param dto the UserDto containing login credentials
+&nbsp;     * @return true if credentials are valid, false otherwise
+&nbsp;     */
+&nbsp;    @PostMapping(BASE_PATH_VERIFY_LOGIN)
+&nbsp;    public Boolean verifyLogin(@RequestBody UserDto dto) {
+<b class="fc">&nbsp;        return service.verifyLogin(dto);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Retrieves a user by their name.
+&nbsp;     *
+&nbsp;     * @param nom the name of the user
+&nbsp;     * @return the UserDto corresponding to the given name
+&nbsp;     */
+&nbsp;    @GetMapping(BASE_PATH_GET_BY_NOM)
+&nbsp;    public UserDto getUserByNom(@RequestParam(&quot;nom&quot;) String nom) {
+<b class="fc">&nbsp;        return service.findByNom(nom);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Checks if a user exists by their name.
+&nbsp;     *
+&nbsp;     * @param nom the name of the user
+&nbsp;     * @return true if a user with the given name exists, false otherwise
+&nbsp;     */
+&nbsp;    @GetMapping(BASE_PATH_EXIST_BY_NOM)
+&nbsp;    public Boolean existByNom(@RequestParam(&quot;nom&quot;) String nom) {
+<b class="fc">&nbsp;        return service.existByNom(nom);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

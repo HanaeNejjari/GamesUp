@@ -1,0 +1,145 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > WishlistRestController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.web.rest</a>
+</div>
+
+<h1>Coverage Summary for Class: WishlistRestController (org.nejjari.hanae.gameup.web.rest)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">WishlistRestController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.web.rest;
+&nbsp;
+&nbsp;import org.nejjari.hanae.gameup.business.WishlistService;
+&nbsp;import org.nejjari.hanae.gameup.dto.WishlistDto;
+&nbsp;import org.nejjari.hanae.gameup.web.SuperRestController;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.web.bind.annotation.RequestMapping;
+&nbsp;import org.springframework.web.bind.annotation.RestController;
+&nbsp;
+&nbsp;/**
+&nbsp; * REST controller for managing Wishlist entities.
+&nbsp; * &lt;p&gt;
+&nbsp; * This controller provides endpoints for CRUD operations on Wishlist resources.
+&nbsp; * It extends the generic SuperRestController to inherit standard RESTful behavior.
+&nbsp; * &lt;/p&gt;
+&nbsp; *
+&nbsp; * @RestController indicates that this class is a RESTful web service controller.
+&nbsp; * @RequestMapping(&quot;/wishlist&quot;) maps HTTP requests to /wishlist to this controller.
+&nbsp; */
+&nbsp;@RestController
+&nbsp;@RequestMapping(WishlistRestController.BASE_PATH)
+&nbsp;public class WishlistRestController extends SuperRestController&lt;WishlistDto, WishlistService&gt; {
+&nbsp;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The base path for this controller.
+&nbsp;     */
+&nbsp;    public static final String BASE_PATH =  &quot;/wishlist&quot;;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Constructs a WishlistRestController with the specified WishlistService.
+&nbsp;     *
+&nbsp;     * @param service the WishlistService used to handle business logic for Wishlist entities
+&nbsp;     */
+&nbsp;    @Autowired
+&nbsp;    protected WishlistRestController(WishlistService service) {
+<b class="fc">&nbsp;        super(service);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

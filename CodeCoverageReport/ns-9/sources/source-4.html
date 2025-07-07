@@ -1,0 +1,175 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > GameRestController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.web.rest</a>
+</div>
+
+<h1>Coverage Summary for Class: GameRestController (org.nejjari.hanae.gameup.web.rest)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">GameRestController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    80%
+  </span>
+  <span class="absValue">
+    (4/5)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.web.rest;
+&nbsp;
+&nbsp;import lombok.SneakyThrows;
+&nbsp;import org.nejjari.hanae.gameup.business.GameService;
+&nbsp;import org.nejjari.hanae.gameup.dto.GameDto;
+&nbsp;import org.nejjari.hanae.gameup.web.SuperRestController;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.web.bind.annotation.GetMapping;
+&nbsp;import org.springframework.web.bind.annotation.RequestMapping;
+&nbsp;import org.springframework.web.bind.annotation.RequestParam;
+&nbsp;import org.springframework.web.bind.annotation.RestController;
+&nbsp;
+&nbsp;import java.util.Set;
+&nbsp;
+&nbsp;/**
+&nbsp; * REST controller for handling game-related web requests.
+&nbsp; */
+&nbsp;@RestController
+&nbsp;@RequestMapping(GameRestController.BASE_PATH)
+&nbsp;public class GameRestController extends SuperRestController&lt;GameDto, GameService&gt; {
+&nbsp;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The base path for this controller.
+&nbsp;     */
+&nbsp;    public static final String BASE_PATH = &quot;/game&quot;;
+&nbsp;    public static final String BASE_PATH_SEARCH = &quot;/search&quot;;
+&nbsp;    public static final String BASE_PATH_RECOMMENDATIONS = &quot;/recommendations&quot;;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Constructor injecting the GameService instance.
+&nbsp;     *
+&nbsp;     * @param service The injected GameService instance used to perform business logic operations on games.
+&nbsp;     */
+&nbsp;    @Autowired
+&nbsp;    protected GameRestController(GameService service) {
+<b class="fc">&nbsp;        super(service);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Handles GET requests for searching distinct game DTOs by multiple criteria (nom, genre, etc.).
+&nbsp;     *
+&nbsp;     * @param nom           The name of the game to search for.
+&nbsp;     * @param genre         The genre of the game to filter by.
+&nbsp;     * @param numEdition    The edition number of the game to filter by.
+&nbsp;     * @param auteur        The author/developer of the game to filter by.
+&nbsp;     * @param categoryType  The type/category of the game to filter by.
+&nbsp;     * @param publisherName The publisher name of the game to filter by.
+&nbsp;     * @return A set containing distinct GameDto objects matching any of the provided criteria.
+&nbsp;     */
+&nbsp;    @GetMapping(path = BASE_PATH_SEARCH)
+&nbsp;    public Set&lt;GameDto&gt; distinctSearchByNomOrGenreOrNumEditionOrAuteurOrCategoryTypeOrPublisherName
+&nbsp;    (@RequestParam(value = &quot;nom&quot;, required = false) String nom, @RequestParam(value = &quot;genre&quot;, required = false) String genre, @RequestParam(value = &quot;numEdition&quot;, required = false) String numEdition,
+&nbsp;     @RequestParam(value = &quot;auteur&quot;, required = false) String auteur, @RequestParam(value = &quot;categoryType&quot;, required = false) String categoryType, @RequestParam(value = &quot;publisherName&quot;, required = false) String publisherName) {
+<b class="fc">&nbsp;        return service.</b>
+&nbsp;                distinctSearchByNomOrGenreOrNumEditionOrAuteurOrCategoryTypeOrPublisherName
+<b class="fc">&nbsp;                        (nom, genre, numEdition, auteur, categoryType, publisherName);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns a set of recommended games based on the AI recommendation algorithm.
+&nbsp;     *
+&nbsp;     * @return a set of recommended GameDto objects.
+&nbsp;     */
+<b class="nc">&nbsp;    @SneakyThrows</b>
+&nbsp;    @GetMapping(path = BASE_PATH_RECOMMENDATIONS)
+&nbsp;    public Set&lt;GameDto&gt; getRecommandedGameByAI(){
+<b class="fc">&nbsp;        return service.getRecommandedGameByAIWithFastAPI();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

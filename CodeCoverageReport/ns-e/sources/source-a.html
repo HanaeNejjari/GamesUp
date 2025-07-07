@@ -1,0 +1,120 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > GameRepository</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.repository</a>
+</div>
+
+<h1>Coverage Summary for Class: GameRepository (org.nejjari.hanae.gameup.repository)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">GameRepository</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.repository;
+&nbsp;
+&nbsp;import org.nejjari.hanae.gameup.entity.GameEntity;
+&nbsp;import org.nejjari.hanae.gameup.repository.base.SuperRepository;
+&nbsp;import org.springframework.data.jpa.repository.Query;
+&nbsp;import org.springframework.stereotype.Repository;
+&nbsp;
+&nbsp;import java.util.Set;
+&nbsp;
+&nbsp;/**
+&nbsp; * Repository interface for managing GameEntity persistence.
+&nbsp; *
+&nbsp; * Extends the generic SuperRepository to inherit basic CRUD operations.
+&nbsp; * Includes a custom query method for performing a distinct search
+&nbsp; * across multiple fields including name, genre, edition number, author,
+&nbsp; * category type, and publisher name.
+&nbsp; */
+&nbsp;@Repository
+&nbsp;public interface GameRepository extends SuperRepository&lt;GameEntity&gt; {
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Performs a distinct search on multiple fields of the GameEntity and its related entities.
+&nbsp;     *
+&nbsp;     * @param nom the name of the game
+&nbsp;     * @param genre the genre of the game
+&nbsp;     * @param numEdition the edition number of the game
+&nbsp;     * @param auteur the author of the game
+&nbsp;     * @param categoryType the type of the category
+&nbsp;     * @param publisherName the name of the publisher
+&nbsp;     * @return a set of distinct GameEntity objects matching the search criteria
+&nbsp;     */
+&nbsp;    @Query(&quot;&quot;&quot;
+&nbsp;        select distinct g from GameEntity g
+&nbsp;        left join g.category c
+&nbsp;        left join g.publisher p
+&nbsp;        where upper(g.nom) like upper(concat(&#39;%&#39;, ?1, &#39;%&#39;))
+&nbsp;           or upper(g.genre) like upper(concat(&#39;%&#39;, ?2, &#39;%&#39;))
+&nbsp;           or upper(g.numEdition) like upper(concat(&#39;%&#39;, ?3, &#39;%&#39;))
+&nbsp;           or upper(g.auteur) like upper(concat(&#39;%&#39;, ?4, &#39;%&#39;))
+&nbsp;           or upper(c.type) like upper(concat(&#39;%&#39;, ?5, &#39;%&#39;))
+&nbsp;           or upper(p.name) like upper(concat(&#39;%&#39;, ?6, &#39;%&#39;))
+&nbsp;    &quot;&quot;&quot;)
+&nbsp;    Set&lt;GameEntity&gt; distinctSearchByNomOrGenreOrNumEditionOrAuteurOrCategoryTypeOrPublisherName(
+&nbsp;            String nom,
+&nbsp;            String genre,
+&nbsp;            String numEdition,
+&nbsp;            String auteur,
+&nbsp;            String categoryType,
+&nbsp;            String publisherName
+&nbsp;    );
+&nbsp;}
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

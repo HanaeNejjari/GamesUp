@@ -1,0 +1,39 @@
+{
+  "interactions": [
+    {
+      "user_id": 100,
+      "game_id": 1,
+      "rating": 4.5
+    },
+    {
+      "user_id": 123,
+      "game_id": 2,
+      "rating": 4.5
+    },
+    {
+      "user_id": 123,
+      "game_id": 3,
+      "rating": 3.0
+    },
+    {
+      "user_id": 200,
+      "game_id": 4,
+      "rating": 3.0
+    },
+    {
+      "user_id": 456,
+      "game_id": 5,
+      "rating": 3.0
+    },
+    {
+      "user_id": 456,
+      "game_id": 6,
+      "rating": 5.0
+    },
+    {
+      "user_id": 789,
+      "game_id": 7,
+      "rating": 5.0
+    }
+  ]
+}

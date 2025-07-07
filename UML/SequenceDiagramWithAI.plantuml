@@ -1,0 +1,16 @@
+@startuml
+actor Frontend
+participant "Spring Boot\n(GET /recommendations)" as SpringBoot
+participant "FastAPI\n(POST /recommendations/)" as FastAPI
+database "Base de données" as DB
+
+Frontend -> SpringBoot : GET /recommendations\n(données utilisateur)
+SpringBoot -> SpringBoot : Prépare les données utilisateur
+SpringBoot -> FastAPI : POST /recommendations/\n(UserData en JSON)
+FastAPI -> FastAPI : Valide la requête (UserData)
+FastAPI -> FastAPI : Appelle generate_recommendations\n(knn_model.py)
+FastAPI -> SpringBoot : RecommendationsResponse (JSON/DTO)
+SpringBoot -> DB : Lecture des données et mapping\n(JPA/ORM)
+DB --> SpringBoot : Résultat (données ENTITY to DTO, confirmation)
+SpringBoot -> Frontend : GameDTO[] (JSON)
+@enduml

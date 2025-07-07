@@ -1,0 +1,309 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > PurchaseEntity</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.entity</a>
+</div>
+
+<h1>Coverage Summary for Class: PurchaseEntity (org.nejjari.hanae.gameup.entity)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PurchaseEntity</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (15/15)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (22/22)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">PurchaseEntity$HibernateInstantiator</td>
+  </tr>
+  <tr>
+    <td class="name">PurchaseEntity$HibernateProxy</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (15/15)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (22/22)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.entity;
+&nbsp;
+&nbsp;import jakarta.persistence.*;
+&nbsp;import lombok.NoArgsConstructor;
+&nbsp;import org.nejjari.hanae.gameup.entity.base.SuperEntity;
+&nbsp;
+&nbsp;import java.time.LocalDate;
+&nbsp;import java.util.ArrayList;
+&nbsp;import java.util.List;
+&nbsp;import java.util.Optional;
+&nbsp;
+&nbsp;/**
+&nbsp; * Entity representing a purchase in the system.
+&nbsp; * A purchase contains a list of purchase lines, a date, and status flags.
+&nbsp; */
+&nbsp;@Entity
+&nbsp;@NoArgsConstructor
+&nbsp;public class PurchaseEntity extends SuperEntity {
+&nbsp;	/**
+&nbsp;	 * The list of purchase lines associated with this purchase.
+&nbsp;	 */
+<b class="fc">&nbsp;	@OneToMany(fetch = FetchType.EAGER)</b>
+&nbsp;	private List&lt;PurchaseLineEntity&gt; line = new ArrayList&lt;&gt;(0);
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * The date of the purchase.
+&nbsp;	 */
+&nbsp;	private LocalDate date;
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Indicates if the purchase has been paid.
+&nbsp;	 */
+&nbsp;	private boolean paid;
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Indicates if the purchase has been delivered.
+&nbsp;	 */
+&nbsp;	private boolean delivered;
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Indicates if the purchase has been archived.
+&nbsp;	 */
+&nbsp;	private boolean archived;
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns the identifier of the purchase.
+&nbsp;	 *
+&nbsp;	 * @return the identifier
+&nbsp;	 */
+&nbsp;	@Override
+&nbsp;	public Long getIdentifier() {
+<b class="fc">&nbsp;		return id;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Constructs a PurchaseEntity with the specified parameters.
+&nbsp;	 *
+&nbsp;	 * @param id        the unique identifier
+&nbsp;	 * @param line      the list of purchase lines
+&nbsp;	 * @param date      the date of the purchase
+&nbsp;	 * @param paid      whether the purchase is paid
+&nbsp;	 * @param delivered whether the purchase is delivered
+&nbsp;	 * @param archived  whether the purchase is archived
+&nbsp;	 */
+<b class="fc">&nbsp;	public PurchaseEntity(Long id, List&lt;PurchaseLineEntity&gt; line, LocalDate date, boolean paid, boolean delivered, boolean archived) {</b>
+<b class="fc">&nbsp;		this.id = id;</b>
+<b class="fc">&nbsp;		this.line = Optional.ofNullable(line).orElse(this.line);</b>
+<b class="fc">&nbsp;		this.date = date;</b>
+<b class="fc">&nbsp;		this.paid = paid;</b>
+<b class="fc">&nbsp;		this.delivered = delivered;</b>
+<b class="fc">&nbsp;		this.archived = archived;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns the identifier of the purchase.
+&nbsp;	 *
+&nbsp;	 * @return the identifier
+&nbsp;	 */
+&nbsp;	public Long getId() {
+<b class="fc">&nbsp;		return this.id;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns the list of purchase lines.
+&nbsp;	 *
+&nbsp;	 * @return the list of purchase lines
+&nbsp;	 */
+&nbsp;	public List&lt;PurchaseLineEntity&gt; getLine() {
+<b class="fc">&nbsp;		return this.line;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns the date of the purchase.
+&nbsp;	 *
+&nbsp;	 * @return the date
+&nbsp;	 */
+&nbsp;	public LocalDate getDate() {
+<b class="fc">&nbsp;		return this.date;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns whether the purchase is paid.
+&nbsp;	 *
+&nbsp;	 * @return true if paid, false otherwise
+&nbsp;	 */
+&nbsp;	public boolean isPaid() {
+<b class="fc">&nbsp;		return this.paid;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns whether the purchase is delivered.
+&nbsp;	 *
+&nbsp;	 * @return true if delivered, false otherwise
+&nbsp;	 */
+&nbsp;	public boolean isDelivered() {
+<b class="fc">&nbsp;		return this.delivered;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns whether the purchase is archived.
+&nbsp;	 *
+&nbsp;	 * @return true if archived, false otherwise
+&nbsp;	 */
+&nbsp;	public boolean isArchived() {
+<b class="fc">&nbsp;		return this.archived;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Sets the identifier of the purchase.
+&nbsp;	 *
+&nbsp;	 * @param id the identifier to set
+&nbsp;	 */
+&nbsp;	public void setId(Long id) {
+<b class="fc">&nbsp;		this.id = id;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Sets the list of purchase lines.
+&nbsp;	 *
+&nbsp;	 * @param line the list of purchase lines to set
+&nbsp;	 */
+&nbsp;	public void setLine(List&lt;PurchaseLineEntity&gt; line) {
+<b class="fc">&nbsp;		this.line = line;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Sets the date of the purchase.
+&nbsp;	 *
+&nbsp;	 * @param date the date to set
+&nbsp;	 */
+&nbsp;	public void setDate(LocalDate date) {
+<b class="fc">&nbsp;		this.date = date;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Sets whether the purchase is paid.
+&nbsp;	 *
+&nbsp;	 * @param paid true if paid, false otherwise
+&nbsp;	 */
+&nbsp;	public void setPaid(boolean paid) {
+<b class="fc">&nbsp;		this.paid = paid;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Sets whether the purchase is delivered.
+&nbsp;	 *
+&nbsp;	 * @param delivered true if delivered, false otherwise
+&nbsp;	 */
+&nbsp;	public void setDelivered(boolean delivered) {
+<b class="fc">&nbsp;		this.delivered = delivered;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Sets whether the purchase is archived.
+&nbsp;	 *
+&nbsp;	 * @param archived true if archived, false otherwise
+&nbsp;	 */
+&nbsp;	public void setArchived(boolean archived) {
+<b class="fc">&nbsp;		this.archived = archived;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns a string representation of the purchase.
+&nbsp;	 *
+&nbsp;	 * @return the string representation
+&nbsp;	 */
+&nbsp;	public String toString() {
+<b class="fc">&nbsp;		return &quot;PurchaseEntity(id=&quot; + this.getId() + &quot;, line=&quot; + this.getLine() + &quot;, date=&quot; + this.getDate() + &quot;, paid=&quot; + this.isPaid() + &quot;, delivered=&quot; + this.isDelivered() + &quot;, archived=&quot; + this.isArchived() + &quot;)&quot;;</b>
+&nbsp;	}
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

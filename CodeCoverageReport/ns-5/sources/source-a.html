@@ -1,0 +1,207 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > WishlistEntity</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.entity</a>
+</div>
+
+<h1>Coverage Summary for Class: WishlistEntity (org.nejjari.hanae.gameup.entity)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">WishlistEntity</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (10/10)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">WishlistEntity$HibernateInstantiator</td>
+  </tr>
+  <tr>
+    <td class="name">WishlistEntity$HibernateProxy</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (10/10)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.entity;
+&nbsp;
+&nbsp;import jakarta.persistence.*;
+&nbsp;import lombok.NoArgsConstructor;
+&nbsp;import org.nejjari.hanae.gameup.entity.base.SuperEntity;
+&nbsp;
+&nbsp;import java.util.ArrayList;
+&nbsp;import java.util.List;
+&nbsp;import java.util.Optional;
+&nbsp;
+&nbsp;/**
+&nbsp; * Entity representing a wishlist in the system.
+&nbsp; * A wishlist contains a list of wished game names.
+&nbsp; */
+&nbsp;@Entity
+&nbsp;@NoArgsConstructor
+&nbsp;public class WishlistEntity extends SuperEntity {
+&nbsp;    /**
+&nbsp;     * The list of wished game names.
+&nbsp;     */
+<b class="fc">&nbsp;    @ElementCollection(fetch = FetchType.EAGER)</b>
+&nbsp;    private List&lt;String&gt; wishes = new ArrayList&lt;&gt;(0);
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the identifier of the wishlist.
+&nbsp;     *
+&nbsp;     * @return the identifier
+&nbsp;     */
+&nbsp;    @Override
+&nbsp;    public Long getIdentifier() {
+<b class="fc">&nbsp;        return id;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Constructs a WishlistEntity with the specified parameters.
+&nbsp;     *
+&nbsp;     * @param id     the unique identifier
+&nbsp;     * @param wishes the list of wished game names
+&nbsp;     */
+<b class="fc">&nbsp;    public WishlistEntity(Long id, List&lt;String&gt; wishes) {</b>
+<b class="fc">&nbsp;        this.id = id;</b>
+<b class="fc">&nbsp;        this.wishes = Optional.ofNullable(wishes).orElse(this.wishes);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the identifier of the wishlist.
+&nbsp;     *
+&nbsp;     * @return the identifier
+&nbsp;     */
+&nbsp;    public Long getId() {
+<b class="fc">&nbsp;        return this.id;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the list of wished game names.
+&nbsp;     *
+&nbsp;     * @return the list of wishes
+&nbsp;     */
+&nbsp;    public List&lt;String&gt; getWishes() {
+<b class="fc">&nbsp;        return this.wishes;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Sets the identifier of the wishlist.
+&nbsp;     *
+&nbsp;     * @param id the identifier to set
+&nbsp;     */
+&nbsp;    public void setId(Long id) {
+<b class="fc">&nbsp;        this.id = id;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Sets the list of wished game names.
+&nbsp;     *
+&nbsp;     * @param wishes the list of wishes to set
+&nbsp;     */
+&nbsp;    public void setWishes(List&lt;String&gt; wishes) {
+<b class="fc">&nbsp;        this.wishes = wishes;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns a string representation of the wishlist.
+&nbsp;     *
+&nbsp;     * @return the string representation
+&nbsp;     */
+&nbsp;    public String toString() {
+<b class="fc">&nbsp;        return &quot;WishlistEntity(id=&quot; + this.getId() + &quot;, wishes=&quot; + this.getWishes() + &quot;)&quot;;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

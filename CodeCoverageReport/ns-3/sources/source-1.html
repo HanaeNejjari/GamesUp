@@ -1,0 +1,207 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > SuperService</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.business.base</a>
+</div>
+
+<h1>Coverage Summary for Class: SuperService (org.nejjari.hanae.gameup.business.base)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">SuperService</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (13/13)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.business.base;
+&nbsp;
+&nbsp;import org.nejjari.hanae.gameup.dto.base.SuperDto;
+&nbsp;import org.nejjari.hanae.gameup.entity.base.SuperEntity;
+&nbsp;import org.nejjari.hanae.gameup.mapper.base.SuperMapper;
+&nbsp;import org.nejjari.hanae.gameup.repository.base.SuperRepository;
+&nbsp;
+&nbsp;import java.util.List;
+&nbsp;import java.util.stream.Collectors;
+&nbsp;
+&nbsp;/**
+&nbsp; * Abstract generic service providing basic CRUD operations for entities and DTOs.
+&nbsp; *
+&nbsp; * @param &lt;K&gt; the entity type extending SuperEntity
+&nbsp; * @param &lt;V&gt; the DTO type extending SuperDto
+&nbsp; * @param &lt;T&gt; the repository type extending SuperRepository
+&nbsp; * @param &lt;M&gt; the mapper type extending SuperMapper
+&nbsp; */
+&nbsp;public abstract class SuperService&lt;K extends SuperEntity, V extends SuperDto, T extends SuperRepository&lt;K&gt;, M extends SuperMapper&lt;V, K&gt;&gt; {
+&nbsp;    /**
+&nbsp;     * The repository used for data access.
+&nbsp;     */
+&nbsp;    protected final T repository;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The mapper used for converting between DTOs and entities.
+&nbsp;     */
+&nbsp;    protected final M mapper;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Constructs a SuperService with the specified repository and mapper.
+&nbsp;     *
+&nbsp;     * @param repository the repository to use
+&nbsp;     * @param mapper     the mapper to use
+&nbsp;     */
+<b class="fc">&nbsp;    public SuperService(T repository, M mapper) {</b>
+<b class="fc">&nbsp;        this.repository = repository;</b>
+<b class="fc">&nbsp;        this.mapper = mapper;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Saves or updates the given DTO.
+&nbsp;     *
+&nbsp;     * @param dto the DTO to save or update
+&nbsp;     * @return the saved or updated DTO
+&nbsp;     */
+&nbsp;    public V saveOrUpdate(V dto) {
+<b class="fc">&nbsp;        K entity = mapper.toEntity(dto);</b>
+<b class="fc">&nbsp;        K save = repository.save(entity);</b>
+<b class="fc">&nbsp;        V dto1 = mapper.toDto(save);</b>
+<b class="fc">&nbsp;        return dto1;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Saves or updates a list of DTOs.
+&nbsp;     *
+&nbsp;     * @param dtos the list of DTOs to save or update
+&nbsp;     * @return the list of saved or updated DTOs
+&nbsp;     */
+&nbsp;    public List&lt;V&gt; saveOrUpdateAll(List&lt;V&gt; dtos) {
+<b class="fc">&nbsp;        List&lt;K&gt; entities = dtos.stream().map(mapper::toEntity).toList();</b>
+<b class="fc">&nbsp;        return repository.saveAll(entities).stream().map(mapper::toDto).toList();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Finds a DTO by its identifier.
+&nbsp;     *
+&nbsp;     * @param id the identifier of the entity
+&nbsp;     * @return the found DTO
+&nbsp;     * @throws java.util.NoSuchElementException if the entity is not found
+&nbsp;     */
+&nbsp;    public V findById(Long id) {
+<b class="fc">&nbsp;        return mapper.toDto(repository.findById(id).orElseThrow());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns all DTOs.
+&nbsp;     *
+&nbsp;     * @return the list of all DTOs
+&nbsp;     */
+&nbsp;    public List&lt;V&gt; findAll() {
+<b class="fc">&nbsp;        return repository.findAll().stream().map(mapper::toDto).collect(Collectors.toUnmodifiableList());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns all DTOs matching the given list of identifiers.
+&nbsp;     *
+&nbsp;     * @param ids the list of identifiers
+&nbsp;     * @return the list of matching DTOs
+&nbsp;     */
+&nbsp;    public List&lt;V&gt; findAllById(List&lt;Long&gt; ids) {
+<b class="fc">&nbsp;        return repository.findAllById(ids).stream().map(mapper::toDto).collect(Collectors.toUnmodifiableList());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Deletes an entity by its identifier.
+&nbsp;     *
+&nbsp;     * @param id the identifier of the entity to delete
+&nbsp;     */
+&nbsp;    public void deleteById(Long id) {
+<b class="fc">&nbsp;        repository.deleteById(id);</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

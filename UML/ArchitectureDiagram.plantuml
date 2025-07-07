@@ -1,0 +1,29 @@
+@startuml
+' Définition des styles pour une meilleure lisibilité
+skinparam componentStyle rectangle
+skinparam rectangle {
+  BackgroundColor #F9F9F9
+  BorderColor #333333
+}
+
+' Composants principaux
+component "Frontend Web/App\n(Angular, React, ...)" as Frontend
+component "Backend Principal\nSpring Boot (Java)" as SpringBoot
+component "Microservice Recommandation\nFastAPI (Python)" as FastAPI
+database "Base de données\n(MySQL, PostgreSQL...)" as DB
+
+' Flux de communication
+Frontend -[#blue]-> FastAPI : API REST\n(HTTP)\n localhost:8081
+Frontend -[#blue]-> SpringBoot : API REST\n(HTTP)\n localhost:8080
+SpringBoot -[#orange]-> FastAPI : API REST\n(HTTP)\n http://my-ai-fastapi-app:8081
+FastAPI -[#orange]-> SpringBoot : API REST\n(HTTP)\n http://my-spring-boot-app:8080
+SpringBoot -[#green]-> DB : JPA/ORM
+
+' Légende (optionnelle)
+legend right
+  <b>Bleu</b> : Communication HTTP/REST depuis le pc
+  <b>Orange</b> : Communication HTTP/REST entre container dockerisés
+  <b>Vert</b> : Accès base de données
+endlegend
+
+@enduml

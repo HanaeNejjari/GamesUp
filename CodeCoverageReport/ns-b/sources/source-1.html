@@ -1,0 +1,97 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > SuperMapper</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.mapper.base</a>
+</div>
+
+<h1>Coverage Summary for Class: SuperMapper (org.nejjari.hanae.gameup.mapper.base)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">SuperMapper</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.mapper.base;
+&nbsp;
+&nbsp;import org.nejjari.hanae.gameup.dto.base.SuperDto;
+&nbsp;import org.nejjari.hanae.gameup.entity.base.SuperEntity;
+&nbsp;
+&nbsp;/**
+&nbsp; * Generic interface for mapping between DTOs and Entities.
+&nbsp; *
+&nbsp; * @param &lt;Dto&gt; the type of the Data Transfer Object, extending {@link SuperDto}
+&nbsp; * @param &lt;Entity&gt; the type of the Entity, extending {@link SuperEntity}
+&nbsp; */
+&nbsp;public interface SuperMapper&lt;Dto extends SuperDto, Entity extends SuperEntity&gt; {
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Converts a DTO to its corresponding Entity.
+&nbsp;     *
+&nbsp;     * @param dto the Data Transfer Object to convert
+&nbsp;     * @return the corresponding Entity
+&nbsp;     */
+&nbsp;    Entity toEntity(Dto dto);
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Converts an Entity to its corresponding DTO.
+&nbsp;     *
+&nbsp;     * @param entity the Entity to convert
+&nbsp;     * @return the corresponding Data Transfer Object
+&nbsp;     */
+&nbsp;    Dto toDto(Entity entity);
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

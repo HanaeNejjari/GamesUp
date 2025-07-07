@@ -1,0 +1,138 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > PurchaseLineDto</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.dto</a>
+</div>
+
+<h1>Coverage Summary for Class: PurchaseLineDto (org.nejjari.hanae.gameup.dto)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PurchaseLineDto</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/7)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.dto;
+&nbsp;
+&nbsp;import org.nejjari.hanae.gameup.dto.base.SuperDto;
+&nbsp;
+&nbsp;
+&nbsp;/**
+&nbsp; * Data Transfer Object representing a single line in a purchase.
+&nbsp; * Contains the ID, user ID, game ID, and price of the purchase line.
+&nbsp; */
+<b class="fc">&nbsp;public record PurchaseLineDto(Long id, Long utilisateurId, Long jeuId, Double prix) implements SuperDto {</b>
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the unique identifier of the purchase line.
+&nbsp;     * @return the ID of the purchase line
+&nbsp;     */
+&nbsp;    @Override
+&nbsp;    public Long getIdentifier() {
+<b class="fc">&nbsp;        return id;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Constructs a new PurchaseLineDto with the specified details.
+&nbsp;     * @param id the unique identifier of the purchase line
+&nbsp;     * @param utilisateurId the ID of the user who made the purchase
+&nbsp;     * @param jeuId the ID of the game being purchased
+&nbsp;     * @param prix the price of the game
+&nbsp;     */
+<b class="fc">&nbsp;    public PurchaseLineDto(Long id, Long utilisateurId, Long jeuId, Double prix) {</b>
+<b class="fc">&nbsp;        this.id = id;</b>
+<b class="fc">&nbsp;        this.utilisateurId = utilisateurId;</b>
+<b class="fc">&nbsp;        this.jeuId = jeuId;</b>
+<b class="fc">&nbsp;        this.prix = prix;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

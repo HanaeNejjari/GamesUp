@@ -1,0 +1,17 @@
+{
+  "user_id": 123,
+  "purchases": [
+    {
+      "game_id": 2,
+      "rating": 4.5
+    },
+    {
+      "game_id": 3,
+      "rating": 3.0
+    },
+    {
+      "game_id": 4,
+      "rating": 4.0
+    }
+  ]
+}

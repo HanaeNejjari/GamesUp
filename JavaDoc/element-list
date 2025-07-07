@@ -1,0 +1,15 @@
+org.nejjari.hanae.gameup
+org.nejjari.hanae.gameup.base
+org.nejjari.hanae.gameup.business
+org.nejjari.hanae.gameup.business.base
+org.nejjari.hanae.gameup.dto
+org.nejjari.hanae.gameup.dto.base
+org.nejjari.hanae.gameup.entity
+org.nejjari.hanae.gameup.entity.base
+org.nejjari.hanae.gameup.mapper
+org.nejjari.hanae.gameup.mapper.base
+org.nejjari.hanae.gameup.repository
+org.nejjari.hanae.gameup.repository.base
+org.nejjari.hanae.gameup.web
+org.nejjari.hanae.gameup.web.rest
+org.nejjari.hanae.gameup.web.security

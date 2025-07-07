@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/Surface 8/IdeaProjects/GameUp/src/test/java/org/nejjari/hanae/gameup</OriginalElement>
+  <nodes>
+    <node x="1961.795600269154" y="611.2755567207312">org.nejjari.hanae.gameup.entity.WishlistEntity</node>
+    <node x="7293.665129064737" y="1601.1505517534174">org.nejjari.hanae.gameup.web.rest.AuthorRestController</node>
+    <node x="2182.8119905031804" y="1383.3051489182783">org.nejjari.hanae.gameup.repository.PurchaseRepositoryTest</node>
+    <node x="1671.7727519526416" y="936.556910062382">org.nejjari.hanae.gameup.GameUpApplicationTests</node>
+    <node x="1317.2532057845783" y="1335.8517677055215">org.nejjari.hanae.gameup.repository.GameRepositoryTest</node>
+    <node x="885.4309879581147" y="1291.0680513758296">org.nejjari.hanae.gameup.entity.InventoryEntity</node>
+    <node x="4400.573788576729" y="640.4137589773559">org.nejjari.hanae.gameup.web.rest.PurchaseLineRestControllerTest</node>
+    <node x="9164.356552815962" y="1354.2333703424483">org.nejjari.hanae.gameup.web.rest.CategoryRestController</node>
+    <node x="7984.333539831878" y="1487.5575522096274">org.nejjari.hanae.gameup.web.rest.InventoryRestController</node>
+    <node x="2652.6237309103444" y="1125.0483804722733">org.nejjari.hanae.gameup.repository.PurchaseRepository</node>
+    <node x="10382.253293686039" y="575.487600615934">org.nejjari.hanae.gameup.web.rest.WishlistRestController</node>
+    <node x="3912.68936581638" y="196.14727747340385">org.nejjari.hanae.gameup.dto.WishlistDto</node>
+    <node x="678.0895866650658" y="265.01546602410195">org.nejjari.hanae.gameup.entity.base.SuperEntity</node>
+    <node x="8307.031105110698" y="862.5883035647702">org.nejjari.hanae.gameup.mapper.base.SuperMapper</node>
+    <node x="10461.47888376895" y="810.8944442439091">org.nejjari.hanae.gameup.web.rest.PublisherRestController</node>
+    <node x="3412.9672732632635" y="68.07311687941515">org.nejjari.hanae.gameup.dto.PurchaseDto</node>
+    <node x="6099.260588231702" y="855.4657398012463">org.nejjari.hanae.gameup.web.rest.GameRestControllerTest</node>
+    <node x="3562.1803851299665" y="416.51452034753413">org.nejjari.hanae.gameup.repository.UserRepository</node>
+    <node x="5382.911345726258" y="1399.3596516428554">org.nejjari.hanae.gameup.business.PurchaseLineServiceTest</node>
+    <node x="2880.723049038458" y="494.9017393511431">org.nejjari.hanae.gameup.repository.base.SuperRepository</node>
+    <node x="6520.826652785511" y="691.8029906929469">org.nejjari.hanae.gameup.dto.CategoryDto</node>
+    <node x="7981.794930358236" y="1101.5564825533183">org.nejjari.hanae.gameup.mapper.PurchaseMapper</node>
+    <node x="1674.3418291120113" y="1564.7014372542963">org.nejjari.hanae.gameup.repository.InventoryRepositoryTest</node>
+    <node x="571.1693712023963" y="660.9370525684895">org.nejjari.hanae.gameup.entity.PublisherEntity</node>
+    <node x="1382.4776827836317" y="1538.9516203405458">org.nejjari.hanae.gameup.web.security.GrantedAuthorityImpl</node>
+    <node x="6106.545975470767" y="1476.3954989795348">org.nejjari.hanae.gameup.GameUpApplication</node>
+    <node x="9421.115279576206" y="646.182265262106">org.nejjari.hanae.gameup.dto.GameRecommendationDto</node>
+    <node x="5793.253966998188" y="1319.4655958289645">org.nejjari.hanae.gameup.business.AuthorServiceTest</node>
+    <node x="863.314516329741" y="661.1149237755188">org.nejjari.hanae.gameup.entity.CategoryEntity</node>
+    <node x="-203.96532612103147" y="536.5189163301941">org.nejjari.hanae.gameup.repository.AvisRepositoryTest</node>
+    <node x="425.18907496580846" y="949.9634600447989">org.nejjari.hanae.gameup.entity.GameEntity</node>
+    <node x="5672.400389087146" y="496.9548766869518">org.nejjari.hanae.gameup.web.SuperAbstractRestControllerTest</node>
+    <node x="3353.447863998951" y="651.4627677366964">org.nejjari.hanae.gameup.repository.WishlistRepository</node>
+    <node x="966.2938114108642" y="1579.8499687215947">org.nejjari.hanae.gameup.repository.AuthorRepositoryTest</node>
+    <node x="8716.801224268176" y="1080.8070675478389">org.nejjari.hanae.gameup.business.PurchaseService</node>
+    <node x="7066.011545149757" y="1117.8075594794973">org.nejjari.hanae.gameup.mapper.CategoryMapper</node>
+    <node x="4925.556881713428" y="515.6047101372271">org.nejjari.hanae.gameup.web.rest.WishlistRestControllerTest</node>
+    <node x="4074.920935561978" y="901.7678811028995">org.nejjari.hanae.gameup.web.security.SecurityConfig</node>
+    <node x="5264.232522629875" y="797.7433234297836">org.nejjari.hanae.gameup.web.rest.AuthorRestControllerTest</node>
+    <node x="132.4738294757039" y="672.8265665482649">org.nejjari.hanae.gameup.repository.UserRepositoryTest</node>
+    <node x="6456.266688423307" y="1153.3209520118721">org.nejjari.hanae.gameup.business.base.SuperServiceTest</node>
+    <node x="10106.511290978446" y="738.147146292975">org.nejjari.hanae.gameup.web.SuperRestController</node>
+    <node x="1153.4854899397865" y="786.9502004067896">org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest</node>
+    <node x="2622.2364142883907" y="1328.4640432357078">org.nejjari.hanae.gameup.repository.GameRepository</node>
+    <node x="4862.597189047871" y="1309.2239176092426">org.nejjari.hanae.gameup.business.PublisherServiceTest</node>
+    <node x="6120.335695237104" y="1161.094374209876">org.nejjari.hanae.gameup.business.UserServiceTest</node>
+    <node x="2677.121361969941" y="943.3944153790352">org.nejjari.hanae.gameup.repository.AvisRepository</node>
+    <node x="9711.456300248263" y="942.2380144374467">org.nejjari.hanae.gameup.dto.InventoryDto</node>
+    <node x="9193.691987504893" y="1079.282204696567">org.nejjari.hanae.gameup.business.PurchaseLineService</node>
+    <node x="2139.213998793777" y="901.1408250711115">org.nejjari.hanae.gameup.entity.PurchaseEntity</node>
+    <node x="7791.767509505047" y="1199.7949929860054">org.nejjari.hanae.gameup.mapper.GameMapper</node>
+    <node x="7512.567689043817" y="1477.8671508805317">org.nejjari.hanae.gameup.business.WishlistService</node>
+    <node x="3296.735605345797" y="470.6579917858181">org.nejjari.hanae.gameup.repository.PublisherRepository</node>
+    <node x="8181.4025204219815" y="1349.8690439561399">org.nejjari.hanae.gameup.business.AvisService</node>
+    <node x="1688.3795950393753" y="1204.1516894579518">org.nejjari.hanae.gameup.repository.PurchaseLineRepositoryTest</node>
+    <node x="7377.876796069081" y="1163.3444310267473">org.nejjari.hanae.gameup.mapper.WishlistMapper</node>
+    <node x="7553.351400983806" y="1265.5923223213551">org.nejjari.hanae.gameup.mapper.UserMapper</node>
+    <node x="1305.802165080962" y="1094.329137754099">org.nejjari.hanae.gameup.repository.WishlistRepositoryTest</node>
+    <node x="3068.056113267057" y="644.0342537362611">org.nejjari.hanae.gameup.repository.InventoryRepository</node>
+    <node x="6183.709261302156" y="341.4669208678181">org.nejjari.hanae.gameup.dto.AvisDto</node>
+    <node x="2842.9627595858715" y="771.329582220921">org.nejjari.hanae.gameup.repository.AuthorRepository</node>
+    <node x="4871.730188463273" y="873.6472450578589">org.nejjari.hanae.gameup.web.rest.AvisRestControllerTest</node>
+    <node x="6801.895436122904" y="1273.8280353421958">org.nejjari.hanae.gameup.business.GameServiceTest</node>
+    <node x="3098.1711848547784" y="821.1031642857682">org.nejjari.hanae.gameup.repository.CategoryRepository</node>
+    <node x="5239.372709490991" y="1038.4104881187657">org.nejjari.hanae.gameup.web.rest.UserRestControllerTest</node>
+    <node x="8645.55012224658" y="956.1349620093314">org.nejjari.hanae.gameup.mapper.InventoryMapper</node>
+    <node x="6728.945452374276" y="1477.0663533190516">org.nejjari.hanae.gameup.business.UserService</node>
+    <node x="6879.244205635472" y="333.94358684524985">org.nejjari.hanae.gameup.dto.base.SuperDto</node>
+    <node x="6372.090766640728" y="1473.015672283257">org.nejjari.hanae.gameup.business.CategoryServiceTest</node>
+    <node x="26.397149852757366" y="964.3414873703414">org.nejjari.hanae.gameup.repository.PublisherRepositoryTest</node>
+    <node x="9046.352727512298" y="804.5789338674557">org.nejjari.hanae.gameup.business.base.SuperService</node>
+    <node x="6480.498855191887" y="421.09448740980713">org.nejjari.hanae.gameup.dto.UserDto</node>
+    <node x="4490.731074999724" y="317.78346920208736">org.nejjari.hanae.gameup.web.rest.PurchaseRestControllerTest</node>
+    <node x="5793.139658873792" y="1549.6615152039458">org.nejjari.hanae.gameup.business.AvisServiceTest</node>
+    <node x="9656.981995772674" y="1202.6804134940774">org.nejjari.hanae.gameup.web.rest.GameRestController</node>
+    <node x="9011.657834505759" y="1204.346157367884">org.nejjari.hanae.gameup.web.rest.PurchaseLineRestController</node>
+    <node x="476.64938256398466" y="1454.3590389684866">org.nejjari.hanae.gameup.entity.AuthorEntity</node>
+    <node x="8556.107434793617" y="1400.5101038359687">org.nejjari.hanae.gameup.web.rest.UserRestController</node>
+    <node x="7226.418730203065" y="1354.2885026569254">org.nejjari.hanae.gameup.business.CategoryService</node>
+    <node x="2299.2668838220916" y="515.996820857267">org.nejjari.hanae.gameup.entity.PurchaseLineEntity</node>
+    <node x="6825.909330844681" y="1103.3607603402593">org.nejjari.hanae.gameup.mapper.AuthorMapper</node>
+    <node x="9814.062481687286" y="583.2804778478528">org.nejjari.hanae.gameup.dto.GameRecommendationsDto</node>
+    <node x="7738.529979635648" y="1612.404967422473">org.nejjari.hanae.gameup.web.rest.PurchaseRestController</node>
+    <node x="1153.5513856304665" y="493.38872418309745">org.nejjari.hanae.gameup.base.AbstractWireMockGameServiceToFastApiTest</node>
+    <node x="5663.783309225953" y="930.8255046056502">org.nejjari.hanae.gameup.web.rest.CategoryRestControllerTest</node>
+    <node x="181.40435923752898" y="204.2165671690763">org.nejjari.hanae.gameup.entity.UserEntity</node>
+    <node x="6096.656859925533" y="617.1386559613948">org.nejjari.hanae.gameup.dto.AuthorDto</node>
+    <node x="6838.131370324715" y="705.3594269584638">org.nejjari.hanae.gameup.dto.GameDto</node>
+    <node x="8085.228102780309" y="1222.0864429210428">org.nejjari.hanae.gameup.business.AuthorService</node>
+    <node x="8550.21519322827" y="1232.988472550153">org.nejjari.hanae.gameup.business.PublisherService</node>
+    <node x="2912.731407112847" y="1004.3776285681922">org.nejjari.hanae.gameup.repository.PurchaseLineRepository</node>
+    <node x="3638.372311725503" y="656.4433373893463">org.nejjari.hanae.gameup.business.GameService</node>
+    <node x="3945.3049205063926" y="-13.538644420975785">org.nejjari.hanae.gameup.dto.PublisherDto</node>
+    <node x="8398.817758462168" y="1114.2584839240137">org.nejjari.hanae.gameup.mapper.PurchaseLineMapper</node>
+    <node x="7719.199122525846" y="1354.4208560863">org.nejjari.hanae.gameup.business.InventoryService</node>
+    <node x="-133.38167057165617" y="195.68861336191026">org.nejjari.hanae.gameup.entity.AvisEntity</node>
+    <node x="4284.2241750681105" y="1084.5249275188798">org.nejjari.hanae.gameup.business.WishlistServiceTest</node>
+    <node x="7668.963125078323" y="1110.0805853612821">org.nejjari.hanae.gameup.mapper.AvisMapper</node>
+    <node x="4245.14348355743" y="38.16368496501872">org.nejjari.hanae.gameup.dto.PurchaseLineDto</node>
+    <node x="894.0559593197456" y="1075.101311931188">org.nejjari.hanae.gameup.repository.CategoryRepositoryTest</node>
+    <node x="6930.1378903102695" y="1751.8568912366252">org.nejjari.hanae.gameup.business.InventoryServiceTest</node>
+    <node x="4058.864693552474" y="406.49777046434144">org.nejjari.hanae.gameup.web.rest.PublisherRestControllerTest</node>
+    <node x="10159.209447913281" y="1037.2548727259975">org.nejjari.hanae.gameup.web.rest.AvisRestController</node>
+    <node x="7148.249783247192" y="1265.5113944088237">org.nejjari.hanae.gameup.mapper.PublisherMapper</node>
+    <node x="5142.121088581276" y="1553.927986648625">org.nejjari.hanae.gameup.business.PurchaseServiceTest</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.nejjari.hanae.gameup.repository.AuthorRepository" target="org.nejjari.hanae.gameup.repository.base.SuperRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="92.00024041412871" y="4.17779079043612E-4" />
+      <point x="3048.0" y="785.33" />
+      <point x="3048.0" y="586.0" />
+      <point x="2986.223" y="586.0" />
+      <point x="-4.9038458200811874E-5" y="14.000260648856965" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.CategoryServiceTest" target="org.nejjari.hanae.gameup.business.base.SuperServiceTest" relationship="GENERALIZATION">
+      <point x="2.333592719878652E-4" y="47.000327716743186" />
+      <point x="6520.091" y="1690.0" />
+      <point x="6675.591" y="1690.0" />
+      <point x="86.82431157669362" y="119.00004798812779" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.GameRepositoryTest" target="org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest" relationship="GENERALIZATION">
+      <point x="-147.50020578457838" y="2.3229447856465413E-4" />
+      <point x="1283.0" y="1406.852" />
+      <point x="1283.0" y="1254.0" />
+      <point x="1648.0" y="1254.0" />
+      <point x="1648.0" y="857.95" />
+      <point x="200.99951006021342" y="-2.0040678953137103E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.dto.InventoryDto" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="REALIZATION">
+      <point x="-81.89430024826288" y="-74.50001443744668" />
+      <point x="9796.562" y="277.0" />
+      <point x="6947.744" y="277.0" />
+      <point x="-2.0563547241181368E-4" y="-31.499586845249837" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.PurchaseLineRepositoryTest" target="org.nejjari.hanae.gameup.entity.PurchaseLineEntity" relationship="CREATE">
+      <point x="194.99999999999977" y="63.48913561315976" />
+      <point x="2579.713998793777" y="1338.6408250711115" />
+      <point x="110.94711497168555" y="162.0" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.CategoryRepositoryTest" target="org.nejjari.hanae.gameup.entity.CategoryEntity" relationship="CREATE">
+      <point x="0.0" y="-71.0" />
+      <point x="84.74144299000466" y="114.0" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.UserRepositoryTest" target="org.nejjari.hanae.gameup.entity.UserEntity" relationship="CREATE">
+      <point x="72.93052976182508" y="-107.0" />
+      <point x="0.0" y="198.00000000000006" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="DEPENDENCY">
+      <point x="-201.00048993978658" y="-2.0040678953137103E-4" />
+      <point x="1123.0" y="857.95" />
+      <point x="1123.0" y="427.015" />
+      <point x="182.50041333493414" y="-4.660241019678324E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.PurchaseRepositoryTest" target="org.nejjari.hanae.gameup.entity.PurchaseEntity" relationship="CREATE">
+      <point x="-1.5979917094032317" y="-71.0" />
+      <point x="0.0" y="210.0" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.CategoryRestControllerTest" target="org.nejjari.hanae.gameup.dto.CategoryDto" relationship="CREATE">
+      <point x="184.49969077404694" y="76.64049539434973" />
+      <point x="6485.0" y="1093.966" />
+      <point x="6485.0" y="751.303" />
+      <point x="-107.99965278551099" y="-14.99999069294688" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.PurchaseLineServiceTest" target="org.nejjari.hanae.gameup.business.base.SuperServiceTest" relationship="GENERALIZATION">
+      <point x="-3.45726258274226E-4" y="47.0003483571445" />
+      <point x="5557.411" y="1690.0" />
+      <point x="6675.591" y="1690.0" />
+      <point x="86.82431157669362" y="119.00004798812779" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.PublisherService" target="org.nejjari.hanae.gameup.business.base.SuperService" relationship="GENERALIZATION">
+      <point x="-1.9322827029100154E-4" y="31.499527449847164" />
+      <point x="8750.715" y="1323.0" />
+      <point x="7774.268" y="1323.0" />
+      <point x="7774.268" y="1172.0" />
+      <point x="9138.301" y="1172.0" />
+      <point x="9138.301" y="1048.0" />
+      <point x="9178.353" y="1048.0" />
+      <point x="2.724877012951765E-4" y="107.00006613254425" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.UserRepository" target="org.nejjari.hanae.gameup.repository.base.SuperRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="-3.8512996661665966E-4" y="55.500479652465856" />
+      <point x="3711.18" y="586.0" />
+      <point x="2986.223" y="586.0" />
+      <point x="-4.9038458200811874E-5" y="14.000260648856965" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.UserService" target="org.nejjari.hanae.gameup.dto.UserDto" relationship="CREATE">
+      <point x="-178.05045237427566" y="-107.00035331905156" />
+      <point x="6769.395" y="1445.966" />
+      <point x="6379.591" y="1445.966" />
+      <point x="6379.591" y="1139.0" />
+      <point x="6053.9" y="1139.0" />
+      <point x="6053.9" y="534.594" />
+      <point x="-157.99985519188704" y="14.999512590192921" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.InventoryRepositoryTest" target="org.nejjari.hanae.gameup.entity.GameEntity" relationship="CREATE">
+      <point x="-223.99982911201118" y="14.99956274570377" />
+      <point x="1633.0" y="1650.701" />
+      <point x="1633.0" y="1269.0" />
+      <point x="199.4999250341915" y="97.03653995520108" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.SuperRestController" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="DEPENDENCY">
+      <point x="-147.00029097844526" y="-1.4629297493229387E-4" />
+      <point x="9327.853" y="857.147" />
+      <point x="9327.853" y="655.0" />
+      <point x="6947.744" y="655.0" />
+      <point x="-2.0563547241181368E-4" y="31.500413154750163" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.PurchaseLineRestControllerTest" target="org.nejjari.hanae.gameup.web.SuperAbstractRestControllerTest" relationship="GENERALIZATION">
+      <point x="2.1142327022971585E-4" y="86.5002410226441" />
+      <point x="4612.074" y="844.0" />
+      <point x="5232.0" y="844.0" />
+      <point x="5232.0" y="716.5" />
+      <point x="-182.0003890871467" y="49.04512331304818" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.AvisService" target="org.nejjari.hanae.gameup.business.base.SuperService" relationship="GENERALIZATION">
+      <point x="4.795780187123455E-4" y="-31.50004395613996" />
+      <point x="8335.403" y="1323.0" />
+      <point x="7774.268" y="1323.0" />
+      <point x="7774.268" y="1172.0" />
+      <point x="9138.301" y="1172.0" />
+      <point x="9138.301" y="1048.0" />
+      <point x="9178.353" y="1048.0" />
+      <point x="2.724877012951765E-4" y="107.00006613254425" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.dto.WishlistDto" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="REALIZATION">
+      <point x="-108.38436581638007" y="-74.50027747340386" />
+      <point x="3927.805" y="-38.0" />
+      <point x="6454.0" y="-38.0" />
+      <point x="6454.0" y="277.0" />
+      <point x="6947.744" y="277.0" />
+      <point x="-2.0563547241181368E-4" y="-31.499586845249837" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.dto.CategoryDto" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="REALIZATION">
+      <point x="-107.99965278551099" y="9.30705311930069E-6" />
+      <point x="6454.0" y="766.303" />
+      <point x="6454.0" y="277.0" />
+      <point x="6947.744" y="277.0" />
+      <point x="-2.0563547241181368E-4" y="-31.499586845249837" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.dto.PurchaseDto" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="REALIZATION">
+      <point x="-2.73263263352419E-4" y="-122.50011687941516" />
+      <point x="3631.967" y="-38.0" />
+      <point x="6454.0" y="-38.0" />
+      <point x="6454.0" y="277.0" />
+      <point x="6947.744" y="277.0" />
+      <point x="-2.0563547241181368E-4" y="-31.499586845249837" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.mapper.GameMapper" target="org.nejjari.hanae.gameup.mapper.base.SuperMapper" relationship="INTERFACE_GENERALIZATION">
+      <point x="4.904949528281577E-4" y="-13.999992986005282" />
+      <point x="7868.768" y="1072.0" />
+      <point x="8436.531" y="1072.0" />
+      <point x="-1.0511069740459789E-4" y="43.499696435229794" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.base.SuperServiceTest" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="DEPENDENCY">
+      <point x="3.1157669309322955E-4" y="-118.99995201187221" />
+      <point x="6588.767" y="1001.635" />
+      <point x="7912.0" y="1001.635" />
+      <point x="7912.0" y="655.0" />
+      <point x="6947.744" y="655.0" />
+      <point x="-2.0563547241181368E-4" y="31.500413154750163" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest" target="org.nejjari.hanae.gameup.base.AbstractWireMockGameServiceToFastApiTest" relationship="GENERALIZATION">
+      <point x="200.99951006021342" y="14.999799593210469" />
+      <point x="1584.0" y="872.95" />
+      <point x="1584.0" y="564.389" />
+      <point x="204.49961436953345" y="2.7581690255829017E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.mapper.base.SuperMapper" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="DEPENDENCY">
+      <point x="-1.0511069740459789E-4" y="-43.500303564770206" />
+      <point x="8436.531" y="655.0" />
+      <point x="6947.744" y="655.0" />
+      <point x="-2.0563547241181368E-4" y="31.500413154750163" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.base.SuperService" target="org.nejjari.hanae.gameup.repository.base.SuperRepository" relationship="DEPENDENCY">
+      <point x="132.0" y="0.0" />
+      <point x="9683.191987504893" y="911.5789338674557" />
+      <point x="9683.191987504893" y="1123.7380144374467" />
+      <point x="10166.709447913281" y="1123.7380144374467" />
+      <point x="10166.709447913281" y="1863.3568912366252" />
+      <point x="-221.46532612103147" y="1863.3568912366252" />
+      <point x="-221.46532612103147" y="163.189" />
+      <point x="3001.223" y="163.189" />
+      <point x="14.9999509615418" y="-14.0" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.dto.AvisDto" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="REALIZATION">
+      <point x="117.9997386978439" y="7.913218189514737E-5" />
+      <point x="6454.0" y="427.967" />
+      <point x="6454.0" y="277.0" />
+      <point x="6947.744" y="277.0" />
+      <point x="-2.0563547241181368E-4" y="-31.499586845249837" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.PurchaseLineRestControllerTest" target="org.nejjari.hanae.gameup.dto.PurchaseLineDto" relationship="CREATE">
+      <point x="-138.84278857672962" y="-86.4997589773559" />
+      <point x="4473.231" y="340.283" />
+      <point x="4227.643" y="340.283" />
+      <point x="4227.643" y="20.664" />
+      <point x="5177.5" y="20.664" />
+      <point x="5177.5" y="112.5" />
+      <point x="163.49951644256998" y="-24.163684965018717" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.PublisherEntity" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="GENERALIZATION">
+      <point x="-114.50037120239631" y="-5.256848953649751E-5" />
+      <point x="541.0" y="774.937" />
+      <point x="541.0" y="215.0" />
+      <point x="860.59" y="215.0" />
+      <point x="4.133349342509973E-4" y="-162.00046602410197" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.InventoryService" target="org.nejjari.hanae.gameup.business.base.SuperService" relationship="GENERALIZATION">
+      <point x="-1.225258465638035E-4" y="-31.499856086300042" />
+      <point x="7920.199" y="1323.0" />
+      <point x="7774.268" y="1323.0" />
+      <point x="7774.268" y="1172.0" />
+      <point x="9138.301" y="1172.0" />
+      <point x="9138.301" y="1048.0" />
+      <point x="9178.353" y="1048.0" />
+      <point x="2.724877012951765E-4" y="107.00006613254425" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.InventoryRestController" target="org.nejjari.hanae.gameup.web.SuperRestController" relationship="GENERALIZATION">
+      <point x="4.6016812211746583E-4" y="31.50044779037262" />
+      <point x="8140.334" y="1576.0" />
+      <point x="10435.0" y="1576.0" />
+      <point x="10435.0" y="857.147" />
+      <point x="146.99970902155474" y="-1.4629297493229387E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.GameEntity" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="GENERALIZATION">
+      <point x="-7.496580849419843E-5" y="-222.00046004479896" />
+      <point x="624.689" y="906.615" />
+      <point x="541.0" y="906.615" />
+      <point x="541.0" y="215.0" />
+      <point x="860.59" y="215.0" />
+      <point x="4.133349342509973E-4" y="-162.00046602410197" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.PublisherRepositoryTest" target="org.nejjari.hanae.gameup.entity.PublisherEntity" relationship="CREATE">
+      <point x="-86.77882042441354" y="-71.0" />
+      <point x="108.11832942834383" y="627.8887241830975" />
+      <point x="685.6693712023963" y="627.8887241830975" />
+      <point x="0.0" y="-114.0" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.PurchaseLineService" target="org.nejjari.hanae.gameup.business.base.SuperService" relationship="GENERALIZATION">
+      <point x="1.24951056932332E-5" y="31.499795303432848" />
+      <point x="9422.192" y="1172.0" />
+      <point x="9138.301" y="1172.0" />
+      <point x="9138.301" y="1048.0" />
+      <point x="9178.353" y="1048.0" />
+      <point x="2.724877012951765E-4" y="107.00006613254425" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.InventoryServiceTest" target="org.nejjari.hanae.gameup.dto.InventoryDto" relationship="CREATE">
+      <point x="148.5" y="0.0" />
+      <point x="10141.481995772674" y="1798.8568912366252" />
+      <point x="10141.481995772674" y="1016.7380144374467" />
+      <point x="167.0" y="0.0" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.PurchaseServiceTest" target="org.nejjari.hanae.gameup.dto.PurchaseDto" relationship="CREATE">
+      <point x="-8.858127603161847E-5" y="-46.99998664862483" />
+      <point x="5291.121" y="1524.0" />
+      <point x="3620.872" y="1524.0" />
+      <point x="3620.872" y="560.015" />
+      <point x="3538.948" y="560.015" />
+      <point x="-93.01927326326359" y="122.49988312058483" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.UserServiceTest" target="org.nejjari.hanae.gameup.dto.UserDto" relationship="CREATE">
+      <point x="3.0476289612124674E-4" y="-119.00037420987587" />
+      <point x="6240.336" y="1139.0" />
+      <point x="6053.9" y="1139.0" />
+      <point x="6053.9" y="534.594" />
+      <point x="-157.99985519188704" y="14.999512590192921" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.PublisherRestController" target="org.nejjari.hanae.gameup.web.SuperRestController" relationship="GENERALIZATION">
+      <point x="-155.4998837689509" y="-4.4424390910080547E-4" />
+      <point x="10435.0" y="842.394" />
+      <point x="10435.0" y="857.147" />
+      <point x="146.99970902155474" y="-1.4629297493229387E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.mapper.PurchaseLineMapper" target="org.nejjari.hanae.gameup.mapper.base.SuperMapper" relationship="INTERFACE_GENERALIZATION">
+      <point x="2.4153783124347683E-4" y="-14.000483924013679" />
+      <point x="8505.318" y="1072.0" />
+      <point x="8436.531" y="1072.0" />
+      <point x="-1.0511069740459789E-4" y="43.499696435229794" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.PublisherRestControllerTest" target="org.nejjari.hanae.gameup.dto.PublisherDto" relationship="CREATE">
+      <point x="-14.999693552474128" y="86.5002295356586" />
+      <point x="4228.365" y="601.0" />
+      <point x="4041.365" y="601.0" />
+      <point x="4041.365" y="362.647" />
+      <point x="4178.805" y="362.647" />
+      <point x="4178.805" y="60.961" />
+      <point x="108.0000794936077" y="-3.5557902421601284E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.mapper.PurchaseMapper" target="org.nejjari.hanae.gameup.mapper.base.SuperMapper" relationship="INTERFACE_GENERALIZATION">
+      <point x="6.964176373003284E-5" y="-14.000482553318307" />
+      <point x="8072.295" y="1072.0" />
+      <point x="8436.531" y="1072.0" />
+      <point x="-1.0511069740459789E-4" y="43.499696435229794" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.GameUpApplicationTests" target="org.nejjari.hanae.gameup.base.AbstractWireMockGameServiceToFastApiTest" relationship="GENERALIZATION">
+      <point x="2.4804735835459724E-4" y="-46.999910062382014" />
+      <point x="1795.773" y="878.0" />
+      <point x="1584.0" y="878.0" />
+      <point x="1584.0" y="564.389" />
+      <point x="204.49961436953345" y="2.7581690255829017E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.CategoryEntity" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="GENERALIZATION">
+      <point x="4.836702590864661E-4" y="114.00007622448118" />
+      <point x="977.815" y="1053.0" />
+      <point x="1600.0" y="1053.0" />
+      <point x="1600.0" y="215.0" />
+      <point x="860.59" y="215.0" />
+      <point x="4.133349342509973E-4" y="-162.00046602410197" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.GameEntity" target="org.nejjari.hanae.gameup.entity.PublisherEntity" relationship="TO_ONE">
+      <point x="60.98029623658783" y="-222.0" />
+      <point x="0.0" y="114.0" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.AvisRestControllerTest" target="org.nejjari.hanae.gameup.web.SuperAbstractRestControllerTest" relationship="GENERALIZATION">
+      <point x="-1.8846327384380857E-4" y="-86.50024505785882" />
+      <point x="5025.23" y="844.0" />
+      <point x="5232.0" y="844.0" />
+      <point x="5232.0" y="716.5" />
+      <point x="-182.0003890871467" y="49.04512331304818" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.UserEntity" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="GENERALIZATION">
+      <point x="164.49964076247102" y="4.3283092367119025E-4" />
+      <point x="541.0" y="402.217" />
+      <point x="541.0" y="215.0" />
+      <point x="860.59" y="215.0" />
+      <point x="4.133349342509973E-4" y="-162.00046602410197" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.AvisRestController" target="org.nejjari.hanae.gameup.web.SuperRestController" relationship="GENERALIZATION">
+      <point x="124.49955208671963" y="1.2727400257972477E-4" />
+      <point x="10435.0" y="1068.755" />
+      <point x="10435.0" y="857.147" />
+      <point x="146.99970902155474" y="-1.4629297493229387E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.PurchaseRepository" target="org.nejjari.hanae.gameup.repository.base.SuperRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="-95.00273091034433" y="-14.000380472273264" />
+      <point x="2659.621" y="897.0" />
+      <point x="3048.0" y="897.0" />
+      <point x="3048.0" y="586.0" />
+      <point x="2986.223" y="586.0" />
+      <point x="-4.9038458200811874E-5" y="14.000260648856965" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.dto.AuthorDto" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="REALIZATION">
+      <point x="153.0001400744668" y="3.440386052488975E-4" />
+      <point x="6454.0" y="703.639" />
+      <point x="6454.0" y="277.0" />
+      <point x="6947.744" y="277.0" />
+      <point x="-2.0563547241181368E-4" y="-31.499586845249837" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.WishlistRepositoryTest" target="org.nejjari.hanae.gameup.entity.WishlistEntity" relationship="CREATE">
+      <point x="159.0" y="0.0" />
+      <point x="2106.296" y="1165.329137754099" />
+      <point x="15.000399730845857" y="114.0" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.AuthorRestController" target="org.nejjari.hanae.gameup.web.SuperRestController" relationship="GENERALIZATION">
+      <point x="-1.2906473693874432E-4" y="-31.499551753417336" />
+      <point x="7433.665" y="1576.0" />
+      <point x="10435.0" y="1576.0" />
+      <point x="10435.0" y="857.147" />
+      <point x="146.99970902155474" y="-1.4629297493229387E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.CategoryService" target="org.nejjari.hanae.gameup.business.base.SuperService" relationship="GENERALIZATION">
+      <point x="2.6979693484463496E-4" y="-31.499502656925415" />
+      <point x="7426.919" y="1323.0" />
+      <point x="7774.268" y="1323.0" />
+      <point x="7774.268" y="1172.0" />
+      <point x="9138.301" y="1172.0" />
+      <point x="9138.301" y="1048.0" />
+      <point x="9178.353" y="1048.0" />
+      <point x="2.724877012951765E-4" y="107.00006613254425" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.UserRestControllerTest" target="org.nejjari.hanae.gameup.dto.UserDto" relationship="CREATE">
+      <point x="156.50029050900866" y="-4.881187655882968E-4" />
+      <point x="5686.283" y="1184.91" />
+      <point x="5686.283" y="1139.0" />
+      <point x="6053.9" y="1139.0" />
+      <point x="6053.9" y="534.594" />
+      <point x="-157.99985519188704" y="14.999512590192921" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.PublisherRepository" target="org.nejjari.hanae.gameup.repository.base.SuperRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="3.9465420286433073E-4" y="14.00000821418189" />
+      <point x="3398.736" y="586.0" />
+      <point x="2986.223" y="586.0" />
+      <point x="-4.9038458200811874E-5" y="14.000260648856965" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.GameService" target="org.nejjari.hanae.gameup.entity.GameEntity" relationship="CREATE">
+      <point x="-3.117255032520916E-4" y="74.49966261065367" />
+      <point x="3874.872" y="1724.201" />
+      <point x="1633.0" y="1724.201" />
+      <point x="1633.0" y="1269.0" />
+      <point x="199.4999250341915" y="97.03653995520108" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.InventoryRepository" target="org.nejjari.hanae.gameup.repository.base.SuperRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="-102.5001132670568" y="-2.5373626112923375E-4" />
+      <point x="3048.0" y="658.034" />
+      <point x="3048.0" y="586.0" />
+      <point x="2986.223" y="586.0" />
+      <point x="-4.9038458200811874E-5" y="14.000260648856965" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.PublisherRestControllerTest" target="org.nejjari.hanae.gameup.web.SuperAbstractRestControllerTest" relationship="GENERALIZATION">
+      <point x="3.064475258724997E-4" y="86.5002295356586" />
+      <point x="4243.365" y="844.0" />
+      <point x="5232.0" y="844.0" />
+      <point x="5232.0" y="716.5" />
+      <point x="-182.0003890871467" y="49.04512331304818" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.InventoryServiceTest" target="org.nejjari.hanae.gameup.business.base.SuperServiceTest" relationship="GENERALIZATION">
+      <point x="1.0968973037961405E-4" y="-46.99989123662522" />
+      <point x="7078.638" y="1722.0" />
+      <point x="6083.0" y="1722.0" />
+      <point x="6083.0" y="1690.0" />
+      <point x="6675.591" y="1690.0" />
+      <point x="86.82431157669362" y="119.00004798812779" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.WishlistRestControllerTest" target="org.nejjari.hanae.gameup.dto.WishlistDto" relationship="CREATE">
+      <point x="1.1828657170553925E-4" y="-86.49971013722711" />
+      <point x="5101.057" y="259.0" />
+      <point x="4393.643" y="259.0" />
+      <point x="4393.643" y="277.0" />
+      <point x="123.4996341836204" y="6.352722526596153" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.AuthorEntity" target="org.nejjari.hanae.gameup.entity.GameEntity" relationship="TO_MANY">
+      <point x="-3.8256398465819075E-4" y="-138.0000389684867" />
+      <point x="642.149" y="1425.0" />
+      <point x="624.689" y="1425.0" />
+      <point x="-7.496580849419843E-5" y="221.99953995520104" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.AvisRepositoryTest" target="org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest" relationship="GENERALIZATION">
+      <point x="3.261210314633445E-4" y="71.00008366980592" />
+      <point x="-66.465" y="1752.0" />
+      <point x="1648.0" y="1752.0" />
+      <point x="1648.0" y="857.95" />
+      <point x="200.99951006021342" y="-2.0040678953137103E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.WishlistServiceTest" target="org.nejjari.hanae.gameup.dto.WishlistDto" relationship="CREATE">
+      <point x="35.19682493188975" y="-46.99992751887976" />
+      <point x="4457.921" y="860.5" />
+      <point x="4874.731" y="860.5" />
+      <point x="4874.731" y="259.0" />
+      <point x="4393.643" y="259.0" />
+      <point x="4393.643" y="277.0" />
+      <point x="123.4996341836204" y="6.352722526596153" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.PurchaseLineRepositoryTest" target="org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest" relationship="GENERALIZATION">
+      <point x="-194.9995950393752" y="3.1054204828251386E-4" />
+      <point x="1648.0" y="1275.152" />
+      <point x="1648.0" y="857.95" />
+      <point x="200.99951006021342" y="-2.0040678953137103E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.base.SuperServiceTest" target="org.nejjari.hanae.gameup.base.AbstractWireMockGameServiceToFastApiTest" relationship="GENERALIZATION">
+      <point x="-14.999688423306907" y="-118.99995201187221" />
+      <point x="6573.767" y="1121.326" />
+      <point x="5701.283" y="1121.326" />
+      <point x="5701.283" y="1348.91" />
+      <point x="5211.23" y="1348.91" />
+      <point x="5211.23" y="1137.025" />
+      <point x="4578.724" y="1137.025" />
+      <point x="4578.724" y="878.0" />
+      <point x="1584.0" y="878.0" />
+      <point x="1584.0" y="564.389" />
+      <point x="204.49961436953345" y="2.7581690255829017E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.PurchaseLineEntity" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="GENERALIZATION">
+      <point x="1.1617790823947871E-4" y="-161.99982085726708" />
+      <point x="2468.767" y="215.0" />
+      <point x="860.59" y="215.0" />
+      <point x="4.133349342509973E-4" y="-162.00046602410197" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.WishlistEntity" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="GENERALIZATION">
+      <point x="3.997308458565385E-4" y="114.00044327926878" />
+      <point x="2091.296" y="1053.0" />
+      <point x="1600.0" y="1053.0" />
+      <point x="1600.0" y="215.0" />
+      <point x="860.59" y="215.0" />
+      <point x="4.133349342509973E-4" y="-162.00046602410197" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.base.SuperService" target="org.nejjari.hanae.gameup.mapper.base.SuperMapper" relationship="DEPENDENCY">
+      <point x="-132.0" y="-14.999933867455752" />
+      <point x="129.5" y="-9.50930356477022" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.dto.PublisherDto" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="REALIZATION">
+      <point x="7.949360724524013E-5" y="-74.50035557902422" />
+      <point x="4053.305" y="-38.0" />
+      <point x="6454.0" y="-38.0" />
+      <point x="6454.0" y="277.0" />
+      <point x="6947.744" y="277.0" />
+      <point x="-2.0563547241181368E-4" y="-31.499586845249837" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.WishlistRestController" target="org.nejjari.hanae.gameup.web.SuperRestController" relationship="GENERALIZATION">
+      <point x="-2.936860382760642E-4" y="31.5003993840661" />
+      <point x="10528.253" y="793.394" />
+      <point x="10435.0" y="793.394" />
+      <point x="10435.0" y="857.147" />
+      <point x="146.99970902155474" y="-1.4629297493229387E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.UserRestController" target="org.nejjari.hanae.gameup.web.SuperRestController" relationship="GENERALIZATION">
+      <point x="-4.347936173871858E-4" y="70.99989616403127" />
+      <point x="8683.607" y="1576.0" />
+      <point x="10435.0" y="1576.0" />
+      <point x="10435.0" y="857.147" />
+      <point x="146.99970902155474" y="-1.4629297493229387E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.PurchaseLineServiceTest" target="org.nejjari.hanae.gameup.dto.PurchaseLineDto" relationship="CREATE">
+      <point x="78.32165427374184" y="-46.9996516428555" />
+      <point x="5635.733" y="132.0" />
+      <point x="5177.5" y="132.0" />
+      <point x="5177.5" y="112.5" />
+      <point x="163.49951644256998" y="-24.163684965018717" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.AuthorServiceTest" target="org.nejjari.hanae.gameup.dto.AuthorDto" relationship="CREATE">
+      <point x="132.50003300181197" y="-10.49959582896463" />
+      <point x="6071.254" y="1355.966" />
+      <point x="6071.254" y="879.0" />
+      <point x="6064.4" y="879.0" />
+      <point x="6064.4" y="703.639" />
+      <point x="-152.9998599255332" y="3.440386052488975E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.WishlistRestControllerTest" target="org.nejjari.hanae.gameup.web.SuperAbstractRestControllerTest" relationship="GENERALIZATION">
+      <point x="1.1828657170553925E-4" y="86.50028986277289" />
+      <point x="5101.057" y="744.0" />
+      <point x="5232.0" y="744.0" />
+      <point x="5232.0" y="716.5" />
+      <point x="-182.0003890871467" y="49.04512331304818" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.UserRestControllerTest" target="org.nejjari.hanae.gameup.web.SuperAbstractRestControllerTest" relationship="GENERALIZATION">
+      <point x="-149.13970949099075" y="-146.5004881187656" />
+      <point x="5246.733" y="744.0" />
+      <point x="5232.0" y="744.0" />
+      <point x="5232.0" y="716.5" />
+      <point x="-182.0003890871467" y="49.04512331304818" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.AuthorService" target="org.nejjari.hanae.gameup.business.base.SuperService" relationship="GENERALIZATION">
+      <point x="-1.0278031004418153E-4" y="31.499557078957196" />
+      <point x="8262.228" y="1323.0" />
+      <point x="7774.268" y="1323.0" />
+      <point x="7774.268" y="1172.0" />
+      <point x="9138.301" y="1172.0" />
+      <point x="9138.301" y="1048.0" />
+      <point x="9178.353" y="1048.0" />
+      <point x="2.724877012951765E-4" y="107.00006613254425" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.AuthorRestControllerTest" target="org.nejjari.hanae.gameup.dto.AuthorDto" relationship="CREATE">
+      <point x="169.50047737012483" y="-53.78832342978353" />
+      <point x="5624.0" y="830.455" />
+      <point x="5624.0" y="879.0" />
+      <point x="6064.4" y="879.0" />
+      <point x="6064.4" y="703.639" />
+      <point x="-152.9998599255332" y="3.440386052488975E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.WishlistRepositoryTest" target="org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest" relationship="GENERALIZATION">
+      <point x="-159.000165080962" y="-1.377540991143178E-4" />
+      <point x="1283.0" y="1165.329" />
+      <point x="1283.0" y="1254.0" />
+      <point x="1648.0" y="1254.0" />
+      <point x="1648.0" y="857.95" />
+      <point x="200.99951006021342" y="-2.0040678953137103E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.AuthorRestControllerTest" target="org.nejjari.hanae.gameup.web.SuperAbstractRestControllerTest" relationship="GENERALIZATION">
+      <point x="-169.49952262987517" y="-3.2342978352062346E-4" />
+      <point x="5246.733" y="884.243" />
+      <point x="5246.733" y="744.0" />
+      <point x="5232.0" y="744.0" />
+      <point x="5232.0" y="716.5" />
+      <point x="-182.0003890871467" y="49.04512331304818" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.base.SuperServiceTest" target="org.nejjari.hanae.gameup.business.base.SuperService" relationship="DEPENDENCY">
+      <point x="15.000311576693093" y="-118.99995201187221" />
+      <point x="6603.767" y="1025.0" />
+      <point x="8845.05" y="1025.0" />
+      <point x="8845.05" y="911.579" />
+      <point x="-131.9997275122987" y="6.613254424792103E-5" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.mapper.AvisMapper" target="org.nejjari.hanae.gameup.mapper.base.SuperMapper" relationship="INTERFACE_GENERALIZATION">
+      <point x="-1.2507832343544578E-4" y="-13.999585361282243" />
+      <point x="7739.963" y="1072.0" />
+      <point x="8436.531" y="1072.0" />
+      <point x="-1.0511069740459789E-4" y="43.499696435229794" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.UserRepositoryTest" target="org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest" relationship="GENERALIZATION">
+      <point x="107.9231705242961" y="107.00043345173515" />
+      <point x="380.897" y="1752.0" />
+      <point x="1648.0" y="1752.0" />
+      <point x="1648.0" y="857.95" />
+      <point x="200.99951006021342" y="-2.0040678953137103E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.AvisRepository" target="org.nejjari.hanae.gameup.repository.base.SuperRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="-3.619699409682653E-4" y="-14.00041537903519" />
+      <point x="2759.621" y="897.0" />
+      <point x="3048.0" y="897.0" />
+      <point x="3048.0" y="586.0" />
+      <point x="2986.223" y="586.0" />
+      <point x="-4.9038458200811874E-5" y="14.000260648856965" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.AuthorEntity" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="GENERALIZATION">
+      <point x="165.49961743601534" y="-3.89684867059259E-5" />
+      <point x="867.931" y="1592.359" />
+      <point x="867.931" y="1053.0" />
+      <point x="1600.0" y="1053.0" />
+      <point x="1600.0" y="215.0" />
+      <point x="860.59" y="215.0" />
+      <point x="4.133349342509973E-4" y="-162.00046602410197" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.InventoryRepositoryTest" target="org.nejjari.hanae.gameup.entity.InventoryEntity" relationship="CREATE">
+      <point x="0.0" y="-71.0" />
+      <point x="1898.3418291120113" y="1495.3517677055215" />
+      <point x="179.5" y="90.28371632969197" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.mapper.AuthorMapper" target="org.nejjari.hanae.gameup.mapper.base.SuperMapper" relationship="INTERFACE_GENERALIZATION">
+      <point x="-3.308446812297916E-4" y="-13.999760340259172" />
+      <point x="6906.409" y="1072.0" />
+      <point x="8436.531" y="1072.0" />
+      <point x="-1.0511069740459789E-4" y="43.499696435229794" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.PurchaseService" target="org.nejjari.hanae.gameup.business.base.SuperService" relationship="GENERALIZATION">
+      <point x="-2.2426817668019794E-4" y="31.499932452161147" />
+      <point x="8918.801" y="1172.0" />
+      <point x="9138.301" y="1172.0" />
+      <point x="9138.301" y="1048.0" />
+      <point x="9178.353" y="1048.0" />
+      <point x="2.724877012951765E-4" y="107.00006613254425" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.dto.UserDto" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="REALIZATION">
+      <point x="-157.99985519188704" y="-4.8740980707862036E-4" />
+      <point x="6454.0" y="519.594" />
+      <point x="6454.0" y="277.0" />
+      <point x="6947.744" y="277.0" />
+      <point x="-2.0563547241181368E-4" y="-31.499586845249837" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.AuthorRepositoryTest" target="org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest" relationship="GENERALIZATION">
+      <point x="1.8858913585972914E-4" y="71.00003127840523" />
+      <point x="1119.294" y="1752.0" />
+      <point x="1648.0" y="1752.0" />
+      <point x="1648.0" y="857.95" />
+      <point x="200.99951006021342" y="-2.0040678953137103E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.UserServiceTest" target="org.nejjari.hanae.gameup.business.base.SuperServiceTest" relationship="GENERALIZATION">
+      <point x="-119.99969523710388" y="-3.742098758721113E-4" />
+      <point x="6083.0" y="1280.094" />
+      <point x="6083.0" y="1690.0" />
+      <point x="6675.591" y="1690.0" />
+      <point x="86.82431157669362" y="119.00004798812779" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.PurchaseRestControllerTest" target="org.nejjari.hanae.gameup.dto.PurchaseDto" relationship="CREATE">
+      <point x="-7.49997243474354E-5" y="86.49953079791266" />
+      <point x="4676.231" y="626.5" />
+      <point x="3625.372" y="626.5" />
+      <point x="3625.372" y="1524.0" />
+      <point x="3620.872" y="1524.0" />
+      <point x="3620.872" y="560.015" />
+      <point x="3538.948" y="560.015" />
+      <point x="-93.01927326326359" y="122.49988312058483" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.PurchaseLineRepository" target="org.nejjari.hanae.gameup.repository.base.SuperRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="-4.0711284691496985E-4" y="-13.999628568192293" />
+      <point x="3030.731" y="897.0" />
+      <point x="3048.0" y="897.0" />
+      <point x="3048.0" y="586.0" />
+      <point x="2986.223" y="586.0" />
+      <point x="-4.9038458200811874E-5" y="14.000260648856965" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.GameService" target="org.nejjari.hanae.gameup.business.base.SuperService" relationship="GENERALIZATION">
+      <point x="2.8076882744967406" y="-74.50033738934633" />
+      <point x="3877.68" y="-53.0" />
+      <point x="8064.0" y="-53.0" />
+      <point x="8064.0" y="1048.0" />
+      <point x="9178.353" y="1048.0" />
+      <point x="2.724877012951765E-4" y="107.00006613254425" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.PurchaseRestController" target="org.nejjari.hanae.gameup.web.SuperRestController" relationship="GENERALIZATION">
+      <point x="2.0364352167234756E-5" y="-31.49996742247299" />
+      <point x="7895.03" y="1576.0" />
+      <point x="10435.0" y="1576.0" />
+      <point x="10435.0" y="857.147" />
+      <point x="146.99970902155474" y="-1.4629297493229387E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.AvisEntity" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="GENERALIZATION">
+      <point x="-3.2942834382687636E-4" y="-137.99961336191026" />
+      <point x="-8.882" y="178.189" />
+      <point x="541.0" y="178.189" />
+      <point x="541.0" y="215.0" />
+      <point x="860.59" y="215.0" />
+      <point x="4.133349342509973E-4" y="-162.00046602410197" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.mapper.base.SuperMapper" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="DEPENDENCY">
+      <point x="14.999894889302595" y="-43.500303564770206" />
+      <point x="8451.531" y="295.0" />
+      <point x="4420.365" y="295.0" />
+      <point x="4420.365" y="388.998" />
+      <point x="1123.0" y="388.998" />
+      <point x="1123.0" y="427.015" />
+      <point x="182.50041333493414" y="-4.660241019678324E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.PurchaseRepositoryTest" target="org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest" relationship="GENERALIZATION">
+      <point x="9.496819529886125E-6" y="70.99985108172177" />
+      <point x="2352.312" y="1752.0" />
+      <point x="1648.0" y="1752.0" />
+      <point x="1648.0" y="857.95" />
+      <point x="200.99951006021342" y="-2.0040678953137103E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.GameServiceTest" target="org.nejjari.hanae.gameup.business.base.SuperServiceTest" relationship="GENERALIZATION">
+      <point x="134.49956387709608" y="-12.648035342195726" />
+      <point x="7183.445" y="1320.18" />
+      <point x="7183.445" y="1722.0" />
+      <point x="6083.0" y="1722.0" />
+      <point x="6083.0" y="1690.0" />
+      <point x="6675.591" y="1690.0" />
+      <point x="86.82431157669362" y="119.00004798812779" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.mapper.WishlistMapper" target="org.nejjari.hanae.gameup.mapper.base.SuperMapper" relationship="INTERFACE_GENERALIZATION">
+      <point x="2.039309192696237E-4" y="-14.000431026747265" />
+      <point x="7462.377" y="1072.0" />
+      <point x="8436.531" y="1072.0" />
+      <point x="-1.0511069740459789E-4" y="43.499696435229794" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.UserService" target="org.nejjari.hanae.gameup.business.base.SuperService" relationship="GENERALIZATION">
+      <point x="-163.05045237427566" y="-107.00035331905156" />
+      <point x="6784.395" y="1048.0" />
+      <point x="9178.353" y="1048.0" />
+      <point x="2.724877012951765E-4" y="107.00006613254425" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.InventoryEntity" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="GENERALIZATION">
+      <point x="179.50001204188538" y="-5.137582957104314E-5" />
+      <point x="1264.794" y="1405.068" />
+      <point x="1264.794" y="1053.0" />
+      <point x="1600.0" y="1053.0" />
+      <point x="1600.0" y="215.0" />
+      <point x="860.59" y="215.0" />
+      <point x="4.133349342509973E-4" y="-162.00046602410197" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.SuperAbstractRestControllerTest" target="org.nejjari.hanae.gameup.base.AbstractWireMockGameServiceToFastApiTest" relationship="GENERALIZATION">
+      <point x="-3.8908714668650646E-4" y="-170.49987668695178" />
+      <point x="5854.4" y="479.455" />
+      <point x="4894.23" y="479.455" />
+      <point x="4894.23" y="616.0" />
+      <point x="4258.365" y="616.0" />
+      <point x="4258.365" y="878.0" />
+      <point x="1584.0" y="878.0" />
+      <point x="1584.0" y="564.389" />
+      <point x="204.49961436953345" y="2.7581690255829017E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.CategoryRestController" target="org.nejjari.hanae.gameup.web.SuperRestController" relationship="GENERALIZATION">
+      <point x="4.4718403842125554E-4" y="31.499629657551623" />
+      <point x="9319.857" y="1576.0" />
+      <point x="10435.0" y="1576.0" />
+      <point x="10435.0" y="857.147" />
+      <point x="146.99970902155474" y="-1.4629297493229387E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.InventoryEntity" target="org.nejjari.hanae.gameup.entity.GameEntity" relationship="TO_MANY">
+      <point x="-179.49998795811462" y="56.79094862417037" />
+      <point x="825.149" y="1461.859" />
+      <point x="825.149" y="1425.0" />
+      <point x="624.689" y="1425.0" />
+      <point x="-7.496580849419843E-5" y="221.99953995520104" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.AuthorServiceTest" target="org.nejjari.hanae.gameup.business.base.SuperServiceTest" relationship="GENERALIZATION">
+      <point x="132.50003300181197" y="4.04171035370382E-4" />
+      <point x="6083.0" y="1366.466" />
+      <point x="6083.0" y="1690.0" />
+      <point x="6675.591" y="1690.0" />
+      <point x="86.82431157669362" y="119.00004798812779" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.SuperRestController" target="org.nejjari.hanae.gameup.business.base.SuperService" relationship="DEPENDENCY">
+      <point x="-147.00029097844526" y="-15.000146292974932" />
+      <point x="9372.853" y="842.147" />
+      <point x="9372.853" y="787.079" />
+      <point x="8583.531" y="787.079" />
+      <point x="8583.531" y="1025.0" />
+      <point x="8845.05" y="1025.0" />
+      <point x="8845.05" y="911.579" />
+      <point x="-131.9997275122987" y="6.613254424792103E-5" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.mapper.UserMapper" target="org.nejjari.hanae.gameup.mapper.base.SuperMapper" relationship="INTERFACE_GENERALIZATION">
+      <point x="-4.009838066849625E-4" y="-14.000322321355043" />
+      <point x="7625.851" y="1072.0" />
+      <point x="8436.531" y="1072.0" />
+      <point x="-1.0511069740459789E-4" y="43.499696435229794" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.AvisServiceTest" target="org.nejjari.hanae.gameup.dto.AvisDto" relationship="CREATE">
+      <point x="-14.999658873791304" y="47.00048479605425" />
+      <point x="5895.14" y="1671.0" />
+      <point x="5749.411" y="1671.0" />
+      <point x="5749.411" y="1229.91" />
+      <point x="6083.0" y="1229.91" />
+      <point x="6083.0" y="427.967" />
+      <point x="-118.0002613021561" y="7.913218189514737E-5" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.GameEntity" target="org.nejjari.hanae.gameup.entity.CategoryEntity" relationship="TO_ONE">
+      <point x="199.5" y="-148.9065499824169" />
+      <point x="962.815" y="1023.056910062382" />
+      <point x="-14.999516329740914" y="114.0" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.GameRestControllerTest" target="org.nejjari.hanae.gameup.web.SuperAbstractRestControllerTest" relationship="GENERALIZATION">
+      <point x="-163.49958823170164" y="-52.639739801246265" />
+      <point x="5620.733" y="913.326" />
+      <point x="5620.733" y="744.0" />
+      <point x="5232.0" y="744.0" />
+      <point x="5232.0" y="716.5" />
+      <point x="-182.0003890871467" y="49.04512331304818" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.GameRestControllerTest" target="org.nejjari.hanae.gameup.dto.GameDto" relationship="CREATE">
+      <point x="163.50041176829836" y="2.6019875372185197E-4" />
+      <point x="6470.0" y="965.966" />
+      <point x="6470.0" y="930.0" />
+      <point x="6632.5" y="930.0" />
+      <point x="6632.5" y="873.303" />
+      <point x="-208.50037032471482" y="33.44357304153618" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.dto.GameDto" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="REALIZATION">
+      <point x="-208.50037032471482" y="18.443573041536183" />
+      <point x="6454.0" y="858.303" />
+      <point x="6454.0" y="277.0" />
+      <point x="6947.744" y="277.0" />
+      <point x="-2.0563547241181368E-4" y="-31.499586845249837" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.PurchaseLineRestController" target="org.nejjari.hanae.gameup.web.SuperRestController" relationship="GENERALIZATION">
+      <point x="-160.65783450575873" y="31.499842632116042" />
+      <point x="9033.0" y="1576.0" />
+      <point x="10435.0" y="1576.0" />
+      <point x="10435.0" y="857.147" />
+      <point x="146.99970902155474" y="-1.4629297493229387E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.PurchaseRestControllerTest" target="org.nejjari.hanae.gameup.web.SuperAbstractRestControllerTest" relationship="GENERALIZATION">
+      <point x="164.8429250002755" y="86.49953079791266" />
+      <point x="4841.074" y="844.0" />
+      <point x="5232.0" y="844.0" />
+      <point x="5232.0" y="716.5" />
+      <point x="-182.0003890871467" y="49.04512331304818" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.PurchaseEntity" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="GENERALIZATION">
+      <point x="-211.4999987937772" y="1.7492888855485944E-4" />
+      <point x="1695.88" y="1111.141" />
+      <point x="1695.88" y="1053.0" />
+      <point x="1600.0" y="1053.0" />
+      <point x="1600.0" y="215.0" />
+      <point x="860.59" y="215.0" />
+      <point x="4.133349342509973E-4" y="-162.00046602410197" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.WishlistRepository" target="org.nejjari.hanae.gameup.repository.base.SuperRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="-96.49986399895124" y="2.3226330358738778E-4" />
+      <point x="3328.0" y="665.463" />
+      <point x="3328.0" y="586.0" />
+      <point x="2986.223" y="586.0" />
+      <point x="-4.9038458200811874E-5" y="14.000260648856965" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.PublisherServiceTest" target="org.nejjari.hanae.gameup.dto.PublisherDto" relationship="CREATE">
+      <point x="-148.00018904787157" y="8.239075737037638E-5" />
+      <point x="4057.421" y="1356.224" />
+      <point x="4057.421" y="844.0" />
+      <point x="4228.365" y="844.0" />
+      <point x="4228.365" y="601.0" />
+      <point x="4041.365" y="601.0" />
+      <point x="4041.365" y="362.647" />
+      <point x="4178.805" y="362.647" />
+      <point x="4178.805" y="60.961" />
+      <point x="108.0000794936077" y="-3.5557902421601284E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.WishlistService" target="org.nejjari.hanae.gameup.business.base.SuperService" relationship="GENERALIZATION">
+      <point x="3.1095618305698736E-4" y="-31.50015088053169" />
+      <point x="7698.568" y="1323.0" />
+      <point x="7774.268" y="1323.0" />
+      <point x="7774.268" y="1172.0" />
+      <point x="9138.301" y="1172.0" />
+      <point x="9138.301" y="1048.0" />
+      <point x="9178.353" y="1048.0" />
+      <point x="2.724877012951765E-4" y="107.00006613254425" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.mapper.CategoryMapper" target="org.nejjari.hanae.gameup.mapper.base.SuperMapper" relationship="INTERFACE_GENERALIZATION">
+      <point x="4.548502429315704E-4" y="-13.999559479497293" />
+      <point x="7156.012" y="1072.0" />
+      <point x="8436.531" y="1072.0" />
+      <point x="-1.0511069740459789E-4" y="43.499696435229794" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.AuthorRepositoryTest" target="org.nejjari.hanae.gameup.entity.AuthorEntity" relationship="CREATE">
+      <point x="-153.0" y="0.0" />
+      <point x="165.5" y="58.49092975310805" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.InventoryRepositoryTest" target="org.nejjari.hanae.gameup.repository.GameRepository" relationship="TO_ONE">
+      <point x="15.0" y="-71.0" />
+      <point x="1913.3418291120113" y="1363.6516894579518" />
+      <point x="-236.5" y="3.687646222243984" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.AvisRestControllerTest" target="org.nejjari.hanae.gameup.dto.AvisDto" relationship="CREATE">
+      <point x="150.86681153672635" y="86.49975494214107" />
+      <point x="5176.097" y="1450.724" />
+      <point x="5124.621" y="1450.724" />
+      <point x="5124.621" y="1671.0" />
+      <point x="5749.411" y="1671.0" />
+      <point x="5749.411" y="1229.91" />
+      <point x="6083.0" y="1229.91" />
+      <point x="6083.0" y="427.967" />
+      <point x="-118.0002613021561" y="7.913218189514737E-5" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.CategoryRepositoryTest" target="org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest" relationship="GENERALIZATION">
+      <point x="168.50004068025441" y="-3.1193118798000796E-4" />
+      <point x="1283.0" y="1146.101" />
+      <point x="1283.0" y="1254.0" />
+      <point x="1648.0" y="1254.0" />
+      <point x="1648.0" y="857.95" />
+      <point x="200.99951006021342" y="-2.0040678953137103E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.dto.GameRecommendationDto" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="REALIZATION">
+      <point x="-2.7957620659435634E-4" y="-86.50026526210593" />
+      <point x="9576.115" y="277.0" />
+      <point x="6947.744" y="277.0" />
+      <point x="-2.0563547241181368E-4" y="-31.499586845249837" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.WishlistServiceTest" target="org.nejjari.hanae.gameup.business.base.SuperServiceTest" relationship="GENERALIZATION">
+      <point x="-1.7506811036582803E-4" y="47.00007248112024" />
+      <point x="4422.724" y="1690.0" />
+      <point x="6675.591" y="1690.0" />
+      <point x="86.82431157669362" y="119.00004798812779" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.InventoryRepositoryTest" target="org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest" relationship="GENERALIZATION">
+      <point x="-223.99982911201118" y="-4.3725429623009404E-4" />
+      <point x="1648.0" y="1635.701" />
+      <point x="1648.0" y="857.95" />
+      <point x="200.99951006021342" y="-2.0040678953137103E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.AvisServiceTest" target="org.nejjari.hanae.gameup.business.base.SuperServiceTest" relationship="GENERALIZATION">
+      <point x="3.4112620869564125E-4" y="47.00048479605425" />
+      <point x="5910.14" y="1690.0" />
+      <point x="6675.591" y="1690.0" />
+      <point x="86.82431157669362" y="119.00004798812779" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.GameRestController" target="org.nejjari.hanae.gameup.web.SuperRestController" relationship="GENERALIZATION">
+      <point x="4.22732591687236E-6" y="62.49958650592271" />
+      <point x="9890.482" y="1576.0" />
+      <point x="10435.0" y="1576.0" />
+      <point x="10435.0" y="857.147" />
+      <point x="146.99970902155474" y="-1.4629297493229387E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.GameRepository" target="org.nejjari.hanae.gameup.repository.base.SuperRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="236.49958571160914" y="-4.32357078352652E-5" />
+      <point x="3328.0" y="1359.964" />
+      <point x="3328.0" y="586.0" />
+      <point x="2986.223" y="586.0" />
+      <point x="-4.9038458200811874E-5" y="14.000260648856965" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.dto.PurchaseLineDto" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="REALIZATION">
+      <point x="-4.835574300159351E-4" y="98.50031503498127" />
+      <point x="4408.643" y="277.0" />
+      <point x="6947.744" y="277.0" />
+      <point x="-2.0563547241181368E-4" y="-31.499586845249837" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.GameServiceTest" target="org.nejjari.hanae.gameup.dto.GameDto" relationship="CREATE">
+      <point x="-134.50043612290392" y="-3.534219581524667E-5" />
+      <point x="6738.767" y="1332.828" />
+      <point x="6738.767" y="930.0" />
+      <point x="6632.5" y="930.0" />
+      <point x="6632.5" y="873.303" />
+      <point x="-208.50037032471482" y="33.44357304153618" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.entity.PurchaseEntity" target="org.nejjari.hanae.gameup.entity.PurchaseLineEntity" relationship="TO_MANY">
+      <point x="118.05288502831445" y="-210.0" />
+      <point x="0.0" y="162.0" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.SuperAbstractRestControllerTest" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="DEPENDENCY">
+      <point x="181.9996109128533" y="-67.81587668695181" />
+      <point x="6439.0" y="599.639" />
+      <point x="6439.0" y="655.0" />
+      <point x="6947.744" y="655.0" />
+      <point x="-2.0563547241181368E-4" y="31.500413154750163" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.web.rest.CategoryRestControllerTest" target="org.nejjari.hanae.gameup.web.SuperAbstractRestControllerTest" relationship="GENERALIZATION">
+      <point x="-184.50030922595306" y="-6.825504605650167" />
+      <point x="5246.733" y="1010.5" />
+      <point x="5246.733" y="744.0" />
+      <point x="5232.0" y="744.0" />
+      <point x="5232.0" y="716.5" />
+      <point x="-182.0003890871467" y="49.04512331304818" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.AvisRepositoryTest" target="org.nejjari.hanae.gameup.entity.AvisEntity" relationship="CREATE">
+      <point x="57.583655549375294" y="-71.0" />
+      <point x="0.0" y="138.0" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.mapper.InventoryMapper" target="org.nejjari.hanae.gameup.mapper.base.SuperMapper" relationship="INTERFACE_GENERALIZATION">
+      <point x="-48.05012224657912" y="14.000037990668602" />
+      <point x="8688.5" y="1072.0" />
+      <point x="8436.531" y="1072.0" />
+      <point x="-1.0511069740459789E-4" y="43.499696435229794" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.base.SuperRepository" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="DEPENDENCY">
+      <point x="-4.9038458200811874E-5" y="-13.999739351143035" />
+      <point x="2986.223" y="388.998" />
+      <point x="1123.0" y="388.998" />
+      <point x="1123.0" y="427.015" />
+      <point x="182.50041333493414" y="-4.660241019678324E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.PublisherRepositoryTest" target="org.nejjari.hanae.gameup.repository.base.SuperRepositoryTest" relationship="GENERALIZATION">
+      <point x="-1.498527573744468E-4" y="70.99951262965851" />
+      <point x="194.897" y="1752.0" />
+      <point x="1648.0" y="1752.0" />
+      <point x="1648.0" y="857.95" />
+      <point x="200.99951006021342" y="-2.0040678953137103E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.PurchaseServiceTest" target="org.nejjari.hanae.gameup.business.base.SuperServiceTest" relationship="GENERALIZATION">
+      <point x="-8.858127603161847E-5" y="47.00001335137517" />
+      <point x="5291.121" y="1690.0" />
+      <point x="6675.591" y="1690.0" />
+      <point x="86.82431157669362" y="119.00004798812779" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.PublisherServiceTest" target="org.nejjari.hanae.gameup.business.base.SuperServiceTest" relationship="GENERALIZATION">
+      <point x="-1.8904787157225655E-4" y="47.00008239075737" />
+      <point x="5010.597" y="1690.0" />
+      <point x="6675.591" y="1690.0" />
+      <point x="86.82431157669362" y="119.00004798812779" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.base.SuperService" target="org.nejjari.hanae.gameup.entity.base.SuperEntity" relationship="DEPENDENCY">
+      <point x="-14.999727512298705" y="-106.99993386745575" />
+      <point x="9163.353" y="295.0" />
+      <point x="4420.365" y="295.0" />
+      <point x="4420.365" y="388.998" />
+      <point x="1123.0" y="388.998" />
+      <point x="1123.0" y="427.015" />
+      <point x="182.50041333493414" y="-4.660241019678324E-4" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.GameRepositoryTest" target="org.nejjari.hanae.gameup.entity.GameEntity" relationship="CREATE">
+      <point x="147.49979421542162" y="2.3229447856465413E-4" />
+      <point x="1633.0" y="1406.852" />
+      <point x="1633.0" y="1269.0" />
+      <point x="199.4999250341915" y="97.03653995520108" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.repository.CategoryRepository" target="org.nejjari.hanae.gameup.repository.base.SuperRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="101.99981514522142" y="-1.6428576827820507E-4" />
+      <point x="3328.0" y="835.103" />
+      <point x="3328.0" y="586.0" />
+      <point x="2986.223" y="586.0" />
+      <point x="-4.9038458200811874E-5" y="14.000260648856965" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.dto.GameRecommendationsDto" target="org.nejjari.hanae.gameup.dto.GameRecommendationDto" relationship="TO_MANY">
+      <point x="-220.5" y="23.401787414253135" />
+      <point x="155.0" y="-79.0" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.mapper.PublisherMapper" target="org.nejjari.hanae.gameup.mapper.base.SuperMapper" relationship="INTERFACE_GENERALIZATION">
+      <point x="24.762216752807944" y="-14.000394408823695" />
+      <point x="7263.512" y="1072.0" />
+      <point x="8436.531" y="1072.0" />
+      <point x="-1.0511069740459789E-4" y="43.499696435229794" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.CategoryServiceTest" target="org.nejjari.hanae.gameup.dto.CategoryDto" relationship="CREATE">
+      <point x="-101.32976664072794" y="-46.999672283256814" />
+      <point x="6418.761" y="1093.966" />
+      <point x="6485.0" y="1093.966" />
+      <point x="6485.0" y="751.303" />
+      <point x="-107.99965278551099" y="-14.99999069294688" />
+    </edge>
+    <edge source="org.nejjari.hanae.gameup.business.base.SuperService" target="org.nejjari.hanae.gameup.dto.base.SuperDto" relationship="DEPENDENCY">
+      <point x="2.724877012951765E-4" y="-106.99993386745575" />
+      <point x="9178.353" y="655.0" />
+      <point x="6947.744" y="655.0" />
+      <point x="-2.0563547241181368E-4" y="31.500413154750163" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.0" showDependencies="true" x="5285.499999999999" y="915.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

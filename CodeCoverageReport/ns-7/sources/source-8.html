@@ -1,0 +1,258 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > PurchaseMapperImpl</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.mapper</a>
+</div>
+
+<h1>Coverage Summary for Class: PurchaseMapperImpl (org.nejjari.hanae.gameup.mapper)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PurchaseMapperImpl</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    71,4%
+  </span>
+  <span class="absValue">
+    (5/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    40,9%
+  </span>
+  <span class="absValue">
+    (9/22)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    58,3%
+  </span>
+  <span class="absValue">
+    (42/72)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.mapper;
+&nbsp;
+&nbsp;import java.time.LocalDate;
+&nbsp;import java.util.ArrayList;
+&nbsp;import java.util.List;
+&nbsp;import javax.annotation.processing.Generated;
+&nbsp;import org.nejjari.hanae.gameup.dto.PurchaseDto;
+&nbsp;import org.nejjari.hanae.gameup.dto.PurchaseLineDto;
+&nbsp;import org.nejjari.hanae.gameup.entity.PurchaseEntity;
+&nbsp;import org.nejjari.hanae.gameup.entity.PurchaseLineEntity;
+&nbsp;import org.springframework.stereotype.Component;
+&nbsp;
+&nbsp;@Generated(
+&nbsp;    value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+&nbsp;    date = &quot;2025-07-07T09:19:42+0200&quot;,
+&nbsp;    comments = &quot;version: 1.6.3, compiler: javac, environment: Java 21.0.6 (Eclipse Adoptium)&quot;
+&nbsp;)
+&nbsp;@Component
+<b class="fc">&nbsp;public class PurchaseMapperImpl implements PurchaseMapper {</b>
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public PurchaseEntity toEntity(PurchaseDto dto) {
+<b class="pc">&nbsp;        if ( dto == null ) {</b>
+<b class="nc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        Long id = null;</b>
+<b class="fc">&nbsp;        List&lt;PurchaseLineEntity&gt; line = null;</b>
+<b class="fc">&nbsp;        LocalDate date = null;</b>
+<b class="fc">&nbsp;        boolean paid = false;</b>
+<b class="fc">&nbsp;        boolean delivered = false;</b>
+<b class="fc">&nbsp;        boolean archived = false;</b>
+&nbsp;
+<b class="fc">&nbsp;        id = dto.id();</b>
+<b class="fc">&nbsp;        line = purchaseLineDtoListToPurchaseLineEntityList( dto.line() );</b>
+<b class="fc">&nbsp;        date = dto.date();</b>
+<b class="pc">&nbsp;        if ( dto.paid() != null ) {</b>
+<b class="fc">&nbsp;            paid = dto.paid();</b>
+&nbsp;        }
+<b class="pc">&nbsp;        if ( dto.delivered() != null ) {</b>
+<b class="fc">&nbsp;            delivered = dto.delivered();</b>
+&nbsp;        }
+<b class="pc">&nbsp;        if ( dto.archived() != null ) {</b>
+<b class="fc">&nbsp;            archived = dto.archived();</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        PurchaseEntity purchaseEntity = new PurchaseEntity( id, line, date, paid, delivered, archived );</b>
+&nbsp;
+<b class="fc">&nbsp;        return purchaseEntity;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public PurchaseDto toDto(PurchaseEntity entity) {
+<b class="pc">&nbsp;        if ( entity == null ) {</b>
+<b class="nc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        Long id = null;</b>
+<b class="fc">&nbsp;        List&lt;PurchaseLineDto&gt; line = null;</b>
+<b class="fc">&nbsp;        LocalDate date = null;</b>
+<b class="fc">&nbsp;        Boolean paid = null;</b>
+<b class="fc">&nbsp;        Boolean delivered = null;</b>
+<b class="fc">&nbsp;        Boolean archived = null;</b>
+&nbsp;
+<b class="fc">&nbsp;        id = entity.getId();</b>
+<b class="fc">&nbsp;        line = purchaseLineEntityListToPurchaseLineDtoList( entity.getLine() );</b>
+<b class="fc">&nbsp;        date = entity.getDate();</b>
+<b class="fc">&nbsp;        paid = entity.isPaid();</b>
+<b class="fc">&nbsp;        delivered = entity.isDelivered();</b>
+<b class="fc">&nbsp;        archived = entity.isArchived();</b>
+&nbsp;
+<b class="fc">&nbsp;        PurchaseDto purchaseDto = new PurchaseDto( id, line, date, paid, delivered, archived );</b>
+&nbsp;
+<b class="fc">&nbsp;        return purchaseDto;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    protected PurchaseLineEntity purchaseLineDtoToPurchaseLineEntity(PurchaseLineDto purchaseLineDto) {
+<b class="nc">&nbsp;        if ( purchaseLineDto == null ) {</b>
+<b class="nc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        Long id = null;</b>
+<b class="nc">&nbsp;        Long utilisateurId = null;</b>
+<b class="nc">&nbsp;        Long jeuId = null;</b>
+<b class="nc">&nbsp;        Double prix = null;</b>
+&nbsp;
+<b class="nc">&nbsp;        id = purchaseLineDto.id();</b>
+<b class="nc">&nbsp;        utilisateurId = purchaseLineDto.utilisateurId();</b>
+<b class="nc">&nbsp;        jeuId = purchaseLineDto.jeuId();</b>
+<b class="nc">&nbsp;        prix = purchaseLineDto.prix();</b>
+&nbsp;
+<b class="nc">&nbsp;        PurchaseLineEntity purchaseLineEntity = new PurchaseLineEntity( id, utilisateurId, jeuId, prix );</b>
+&nbsp;
+<b class="nc">&nbsp;        return purchaseLineEntity;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    protected List&lt;PurchaseLineEntity&gt; purchaseLineDtoListToPurchaseLineEntityList(List&lt;PurchaseLineDto&gt; list) {
+<b class="pc">&nbsp;        if ( list == null ) {</b>
+<b class="nc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        List&lt;PurchaseLineEntity&gt; list1 = new ArrayList&lt;PurchaseLineEntity&gt;( list.size() );</b>
+<b class="pc">&nbsp;        for ( PurchaseLineDto purchaseLineDto : list ) {</b>
+<b class="nc">&nbsp;            list1.add( purchaseLineDtoToPurchaseLineEntity( purchaseLineDto ) );</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        return list1;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    protected PurchaseLineDto purchaseLineEntityToPurchaseLineDto(PurchaseLineEntity purchaseLineEntity) {
+<b class="nc">&nbsp;        if ( purchaseLineEntity == null ) {</b>
+<b class="nc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        Long id = null;</b>
+<b class="nc">&nbsp;        Long utilisateurId = null;</b>
+<b class="nc">&nbsp;        Long jeuId = null;</b>
+<b class="nc">&nbsp;        Double prix = null;</b>
+&nbsp;
+<b class="nc">&nbsp;        id = purchaseLineEntity.getId();</b>
+<b class="nc">&nbsp;        utilisateurId = purchaseLineEntity.getUtilisateurId();</b>
+<b class="nc">&nbsp;        jeuId = purchaseLineEntity.getJeuId();</b>
+<b class="nc">&nbsp;        prix = purchaseLineEntity.getPrix();</b>
+&nbsp;
+<b class="nc">&nbsp;        PurchaseLineDto purchaseLineDto = new PurchaseLineDto( id, utilisateurId, jeuId, prix );</b>
+&nbsp;
+<b class="nc">&nbsp;        return purchaseLineDto;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    protected List&lt;PurchaseLineDto&gt; purchaseLineEntityListToPurchaseLineDtoList(List&lt;PurchaseLineEntity&gt; list) {
+<b class="pc">&nbsp;        if ( list == null ) {</b>
+<b class="nc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        List&lt;PurchaseLineDto&gt; list1 = new ArrayList&lt;PurchaseLineDto&gt;( list.size() );</b>
+<b class="pc">&nbsp;        for ( PurchaseLineEntity purchaseLineEntity : list ) {</b>
+<b class="nc">&nbsp;            list1.add( purchaseLineEntityToPurchaseLineDto( purchaseLineEntity ) );</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        return list1;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+@startuml
+skinparam componentStyle rectangle
+
+' Composants principaux
+component "Frontend Web/App" as Frontend {
+  [UI/UX]
+  [Appels API REST]
+}
+
+component "Spring Boot Service" as SpringBoot {
+  [DTO]
+  [Controller]
+  [Service]
+  [Repository]
+  [Entity]
+}
+
+component "FastAPI Service" as FastAPI {
+  [main.py]
+  [recommendation.py]
+  [knn_model.py]
+  [models.py]
+  [schemas.py]
+  [data_loader.py]
+}
+
+database "Base de données" as DB
+
+' Relations
+Frontend -[#blue]-> SpringBoot : API REST
+SpringBoot -[#blue]-> FastAPI : API REST
+SpringBoot -[#green]-> DB : JPA/ORM
+
+@enduml

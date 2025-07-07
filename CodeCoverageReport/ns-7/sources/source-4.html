@@ -1,0 +1,253 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > GameMapperImpl</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.mapper</a>
+</div>
+
+<h1>Coverage Summary for Class: GameMapperImpl (org.nejjari.hanae.gameup.mapper)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">GameMapperImpl</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (6/12)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    62,3%
+  </span>
+  <span class="absValue">
+    (43/69)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.mapper;
+&nbsp;
+&nbsp;import javax.annotation.processing.Generated;
+&nbsp;import org.nejjari.hanae.gameup.dto.CategoryDto;
+&nbsp;import org.nejjari.hanae.gameup.dto.GameDto;
+&nbsp;import org.nejjari.hanae.gameup.dto.PublisherDto;
+&nbsp;import org.nejjari.hanae.gameup.entity.CategoryEntity;
+&nbsp;import org.nejjari.hanae.gameup.entity.GameEntity;
+&nbsp;import org.nejjari.hanae.gameup.entity.PublisherEntity;
+&nbsp;import org.springframework.stereotype.Component;
+&nbsp;
+&nbsp;@Generated(
+&nbsp;    value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+&nbsp;    date = &quot;2025-07-07T09:19:42+0200&quot;,
+&nbsp;    comments = &quot;version: 1.6.3, compiler: javac, environment: Java 21.0.6 (Eclipse Adoptium)&quot;
+&nbsp;)
+&nbsp;@Component
+<b class="fc">&nbsp;public class GameMapperImpl implements GameMapper {</b>
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public GameEntity toEntity(GameDto dto) {
+<b class="pc">&nbsp;        if ( dto == null ) {</b>
+<b class="nc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        Long id = null;</b>
+<b class="fc">&nbsp;        String nom = null;</b>
+<b class="fc">&nbsp;        String auteur = null;</b>
+<b class="fc">&nbsp;        String genre = null;</b>
+<b class="fc">&nbsp;        CategoryEntity category = null;</b>
+<b class="fc">&nbsp;        PublisherEntity publisher = null;</b>
+<b class="fc">&nbsp;        String numEdition = null;</b>
+&nbsp;
+<b class="fc">&nbsp;        id = dto.id();</b>
+<b class="fc">&nbsp;        nom = dto.nom();</b>
+<b class="fc">&nbsp;        auteur = dto.auteur();</b>
+<b class="fc">&nbsp;        genre = dto.genre();</b>
+<b class="fc">&nbsp;        category = categoryDtoToCategoryEntity( dto.category() );</b>
+<b class="fc">&nbsp;        publisher = publisherDtoToPublisherEntity( dto.publisher() );</b>
+<b class="fc">&nbsp;        numEdition = dto.numEdition();</b>
+&nbsp;
+<b class="fc">&nbsp;        GameEntity gameEntity = new GameEntity( id, nom, auteur, genre, category, publisher, numEdition );</b>
+&nbsp;
+<b class="fc">&nbsp;        return gameEntity;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public GameDto toDto(GameEntity entity) {
+<b class="pc">&nbsp;        if ( entity == null ) {</b>
+<b class="nc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        Long id = null;</b>
+<b class="fc">&nbsp;        String nom = null;</b>
+<b class="fc">&nbsp;        String auteur = null;</b>
+<b class="fc">&nbsp;        String genre = null;</b>
+<b class="fc">&nbsp;        CategoryDto category = null;</b>
+<b class="fc">&nbsp;        PublisherDto publisher = null;</b>
+<b class="fc">&nbsp;        String numEdition = null;</b>
+&nbsp;
+<b class="fc">&nbsp;        id = entity.getId();</b>
+<b class="fc">&nbsp;        nom = entity.getNom();</b>
+<b class="fc">&nbsp;        auteur = entity.getAuteur();</b>
+<b class="fc">&nbsp;        genre = entity.getGenre();</b>
+<b class="fc">&nbsp;        category = categoryEntityToCategoryDto( entity.getCategory() );</b>
+<b class="fc">&nbsp;        publisher = publisherEntityToPublisherDto( entity.getPublisher() );</b>
+<b class="fc">&nbsp;        numEdition = entity.getNumEdition();</b>
+&nbsp;
+<b class="fc">&nbsp;        GameDto gameDto = new GameDto( id, nom, auteur, genre, category, publisher, numEdition );</b>
+&nbsp;
+<b class="fc">&nbsp;        return gameDto;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    protected CategoryEntity categoryDtoToCategoryEntity(CategoryDto categoryDto) {
+<b class="pc">&nbsp;        if ( categoryDto == null ) {</b>
+<b class="fc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        Long id = null;</b>
+<b class="nc">&nbsp;        String type = null;</b>
+&nbsp;
+<b class="nc">&nbsp;        id = categoryDto.id();</b>
+<b class="nc">&nbsp;        type = categoryDto.type();</b>
+&nbsp;
+<b class="nc">&nbsp;        CategoryEntity categoryEntity = new CategoryEntity( id, type );</b>
+&nbsp;
+<b class="nc">&nbsp;        return categoryEntity;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    protected PublisherEntity publisherDtoToPublisherEntity(PublisherDto publisherDto) {
+<b class="pc">&nbsp;        if ( publisherDto == null ) {</b>
+<b class="fc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        Long id = null;</b>
+<b class="nc">&nbsp;        String name = null;</b>
+&nbsp;
+<b class="nc">&nbsp;        id = publisherDto.id();</b>
+<b class="nc">&nbsp;        name = publisherDto.name();</b>
+&nbsp;
+<b class="nc">&nbsp;        PublisherEntity publisherEntity = new PublisherEntity( id, name );</b>
+&nbsp;
+<b class="nc">&nbsp;        return publisherEntity;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    protected CategoryDto categoryEntityToCategoryDto(CategoryEntity categoryEntity) {
+<b class="pc">&nbsp;        if ( categoryEntity == null ) {</b>
+<b class="fc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        Long id = null;</b>
+<b class="nc">&nbsp;        String type = null;</b>
+&nbsp;
+<b class="nc">&nbsp;        id = categoryEntity.getId();</b>
+<b class="nc">&nbsp;        type = categoryEntity.getType();</b>
+&nbsp;
+<b class="nc">&nbsp;        CategoryDto categoryDto = new CategoryDto( id, type );</b>
+&nbsp;
+<b class="nc">&nbsp;        return categoryDto;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    protected PublisherDto publisherEntityToPublisherDto(PublisherEntity publisherEntity) {
+<b class="pc">&nbsp;        if ( publisherEntity == null ) {</b>
+<b class="fc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        Long id = null;</b>
+<b class="nc">&nbsp;        String name = null;</b>
+&nbsp;
+<b class="nc">&nbsp;        id = publisherEntity.getId();</b>
+<b class="nc">&nbsp;        name = publisherEntity.getName();</b>
+&nbsp;
+<b class="nc">&nbsp;        PublisherDto publisherDto = new PublisherDto( id, name );</b>
+&nbsp;
+<b class="nc">&nbsp;        return publisherDto;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

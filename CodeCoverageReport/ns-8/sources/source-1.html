@@ -1,0 +1,255 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > SuperRestController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.web</a>
+</div>
+
+<h1>Coverage Summary for Class: SuperRestController (org.nejjari.hanae.gameup.web)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">SuperRestController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    87,5%
+  </span>
+  <span class="absValue">
+    (7/8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (2/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    71,4%
+  </span>
+  <span class="absValue">
+    (10/14)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.web;
+&nbsp;
+&nbsp;import org.nejjari.hanae.gameup.business.base.SuperService;
+&nbsp;import org.nejjari.hanae.gameup.dto.base.SuperDto;
+&nbsp;import org.nejjari.hanae.gameup.mapper.base.SuperMapper;
+&nbsp;import org.nejjari.hanae.gameup.repository.base.SuperRepository;
+&nbsp;import org.springframework.web.bind.annotation.*;
+&nbsp;
+&nbsp;import java.util.List;
+&nbsp;
+&nbsp;/**
+&nbsp; * This class is an abstract base class for REST controllers
+&nbsp; * that handle common CRUD operations for entities.
+&nbsp; * It provides default implementations for saving, retrieving, updating,
+&nbsp; * and deleting entities using a corresponding {@link SuperService}.
+&nbsp; *
+&nbsp; * &lt;p&gt;This class is designed to be extended by concrete REST controllers,
+&nbsp; * which should specify the DTO type and the service type.
+&nbsp; *
+&nbsp; * @param &lt;DTO&gt; The Data Transfer Object type, extending {@link SuperDto}.
+&nbsp; *              This represents the data structure used for transferring
+&nbsp; *              data between the client and the server.
+&nbsp; * @param &lt;S&gt;   The Service type, extending {@link SuperService}.
+&nbsp; *              This provides CRUD operations for entities.
+&nbsp; * It provides default implementations for saving, retrieving, updating,
+&nbsp; * and deleting entities using a corresponding {@link SuperService}.
+&nbsp; *
+&nbsp; * &lt;p&gt;This class is designed to be extended by concrete REST controllers,
+&nbsp; * which should specify the DTO type and the service type.
+&nbsp; *
+&nbsp; * @param &lt;DTO&gt; The Data Transfer Object type, extending {@link SuperDto}.
+&nbsp; *              This represents the data structure used for transferring
+&nbsp; *              data between the client and the server.
+&nbsp; * @param &lt;S&gt;   The Service type, extending {@link SuperService}.
+&nbsp; *              This provides the business logic for the entity.
+&nbsp; */
+&nbsp;public abstract class SuperRestController&lt;DTO extends SuperDto, S extends SuperService&lt;?,DTO,? extends SuperRepository&lt;?&gt;,? extends SuperMapper&lt;DTO,?&gt;&gt;&gt; {
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The service used to perform CRUD operations on the entity.
+&nbsp;     */
+&nbsp;    protected S service;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Constructor for the SuperRestController.
+&nbsp;     *
+&nbsp;     * @param service The service instance to be used for CRUD operations.
+&nbsp;     */
+<b class="fc">&nbsp;    protected SuperRestController(S service) {</b>
+<b class="fc">&nbsp;        this.service = service;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Saves a new entity.
+&nbsp;     *
+&nbsp;     * @param dto The DTO representing the entity to save.
+&nbsp;     * @return The saved DTO.
+&nbsp;     * @throws RuntimeException if the ID is not null.
+&nbsp;     */
+&nbsp;    @PostMapping
+&nbsp;    public DTO save(@RequestBody DTO dto) {
+<b class="pc">&nbsp;        if(dto.getIdentifier() != null) {</b>
+<b class="nc">&nbsp;            throw new RuntimeException(&quot;ID must be null&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        return service.saveOrUpdate(dto);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Retrieves an entity by its ID.
+&nbsp;     *
+&nbsp;     * @param id The ID of the entity to retrieve.
+&nbsp;     * @return The DTO representing the found entity.
+&nbsp;     */
+&nbsp;    @GetMapping
+&nbsp;    public DTO findById(@RequestParam Long id) {
+<b class="fc">&nbsp;        return service.findById(id);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Retrieves all entities.
+&nbsp;     *
+&nbsp;     * @return A list of DTOs representing all entities.
+&nbsp;     */
+&nbsp;    @GetMapping(&quot;/all&quot;)
+&nbsp;    public List&lt;DTO&gt; findAll() {
+<b class="fc">&nbsp;        return service.findAll();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Updates an entity using the HTTP PUT method.
+&nbsp;     *
+&nbsp;     * @param dto The DTO representing the entity to update.
+&nbsp;     * @return The updated DTO.
+&nbsp;     */
+&nbsp;    @PutMapping
+&nbsp;    public DTO updateByPut(@RequestBody DTO dto) {
+<b class="fc">&nbsp;        return saveAndReturnModifiedDTO(dto);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Updates an entity using the HTTP PATCH method.
+&nbsp;     *
+&nbsp;     * @param dto The DTO representing the entity to update.
+&nbsp;     * @return The updated DTO.
+&nbsp;     */
+&nbsp;    @PatchMapping
+&nbsp;    public DTO updateByPatch(@RequestBody DTO dto) {
+<b class="fc">&nbsp;        return saveAndReturnModifiedDTO(dto);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Saves and returns the modified DTO.
+&nbsp;     *
+&nbsp;     * @param dto The DTO to save.
+&nbsp;     * @return The saved DTO.
+&nbsp;     * @throws RuntimeException if the ID is null.
+&nbsp;     */
+&nbsp;    private DTO saveAndReturnModifiedDTO(DTO dto) {
+<b class="pc">&nbsp;        if(dto.getIdentifier() != null) {</b>
+<b class="fc">&nbsp;            return service.saveOrUpdate(dto);</b>
+&nbsp;        }
+&nbsp;        else {
+<b class="nc">&nbsp;            throw new RuntimeException(&quot;ID must not be null&quot;);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Deletes an entity by its ID.
+&nbsp;     *
+&nbsp;     * @param id The ID of the entity to delete.
+&nbsp;     * @return Always returns null.
+&nbsp;     */
+&nbsp;    @DeleteMapping
+&nbsp;    public DTO deleteByDTO(@RequestParam Long id) {
+<b class="nc">&nbsp;        service.deleteById(id);</b>
+<b class="nc">&nbsp;        return null;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

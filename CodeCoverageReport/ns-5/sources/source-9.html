@@ -1,0 +1,296 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > UserEntity</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.entity</a>
+</div>
+
+<h1>Coverage Summary for Class: UserEntity (org.nejjari.hanae.gameup.entity)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">UserEntity</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (14/14)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (19/19)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">UserEntity$HibernateInstantiator</td>
+  </tr>
+  <tr>
+    <td class="name">UserEntity$HibernateProxy</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (14/14)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (19/19)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.entity;
+&nbsp;
+&nbsp;import jakarta.persistence.*;
+&nbsp;import lombok.NoArgsConstructor;
+&nbsp;import org.nejjari.hanae.gameup.entity.base.SuperEntity;
+&nbsp;import org.nejjari.hanae.gameup.web.security.GrantedAuthorityImpl;
+&nbsp;import org.springframework.security.core.GrantedAuthority;
+&nbsp;import org.springframework.security.core.userdetails.UserDetails;
+&nbsp;
+&nbsp;import java.util.ArrayList;
+&nbsp;import java.util.Collection;
+&nbsp;import java.util.List;
+&nbsp;
+&nbsp;/**
+&nbsp; * Entity representing a user in the system.
+&nbsp; * Implements UserDetails for Spring Security integration.
+&nbsp; */
+&nbsp;@Entity
+&nbsp;@NoArgsConstructor
+&nbsp;@Table(indexes = @Index(name = &quot;idx_nom&quot;, columnList = &quot;nom&quot;, unique = true))
+&nbsp;public class UserEntity extends SuperEntity implements UserDetails {
+&nbsp;    /**
+&nbsp;     * The unique username of the user.
+&nbsp;     */
+&nbsp;    @Column(unique = true)
+&nbsp;    private String nom;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The hashed password of the user.
+&nbsp;     */
+&nbsp;    private String motDePasseHash;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The list of roles assigned to the user.
+&nbsp;     */
+<b class="fc">&nbsp;    @ElementCollection(fetch = FetchType.EAGER)</b>
+&nbsp;    private List&lt;String&gt; roles = new ArrayList&lt;&gt;(2);
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the authorities granted to the user.
+&nbsp;     *
+&nbsp;     * @return the collection of granted authorities
+&nbsp;     */
+&nbsp;    @Override
+&nbsp;    @Transient
+&nbsp;    public Collection&lt;? extends GrantedAuthority&gt; getAuthorities() {
+<b class="fc">&nbsp;        return roles.stream().map(GrantedAuthorityImpl::new).toList();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the hashed password.
+&nbsp;     *
+&nbsp;     * @return the password hash
+&nbsp;     */
+&nbsp;    @Override
+&nbsp;    @Transient
+&nbsp;    public String getPassword() {
+<b class="fc">&nbsp;        return motDePasseHash;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the username.
+&nbsp;     *
+&nbsp;     * @return the username
+&nbsp;     */
+&nbsp;    @Override
+&nbsp;    @Transient
+&nbsp;    public String getUsername() {
+<b class="fc">&nbsp;        return nom;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the identifier of the user.
+&nbsp;     *
+&nbsp;     * @return the identifier
+&nbsp;     */
+&nbsp;    @Override
+&nbsp;    public Long getIdentifier() {
+<b class="fc">&nbsp;        return id;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Constructs a UserEntity with the specified parameters.
+&nbsp;     *
+&nbsp;     * @param id              the unique identifier
+&nbsp;     * @param nom             the username
+&nbsp;     * @param motDePasseHash  the hashed password
+&nbsp;     * @param roles           the list of roles
+&nbsp;     */
+<b class="fc">&nbsp;    public UserEntity(Long id, String nom, String motDePasseHash, List&lt;String&gt; roles) {</b>
+<b class="fc">&nbsp;        this.id = id;</b>
+<b class="fc">&nbsp;        this.nom = nom;</b>
+<b class="fc">&nbsp;        this.motDePasseHash = motDePasseHash;</b>
+<b class="fc">&nbsp;        this.roles = roles;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the identifier of the user.
+&nbsp;     *
+&nbsp;     * @return the identifier
+&nbsp;     */
+&nbsp;    public Long getId() {
+<b class="fc">&nbsp;        return this.id;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the username.
+&nbsp;     *
+&nbsp;     * @return the username
+&nbsp;     */
+&nbsp;    public String getNom() {
+<b class="fc">&nbsp;        return this.nom;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the hashed password.
+&nbsp;     *
+&nbsp;     * @return the password hash
+&nbsp;     */
+&nbsp;    public String getMotDePasseHash() {
+<b class="fc">&nbsp;        return this.motDePasseHash;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the list of roles.
+&nbsp;     *
+&nbsp;     * @return the list of roles
+&nbsp;     */
+&nbsp;    public List&lt;String&gt; getRoles() {
+<b class="fc">&nbsp;        return this.roles;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Sets the identifier of the user.
+&nbsp;     *
+&nbsp;     * @param id the identifier to set
+&nbsp;     */
+&nbsp;    public void setId(Long id) {
+<b class="fc">&nbsp;        this.id = id;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Sets the username.
+&nbsp;     *
+&nbsp;     * @param nom the username to set
+&nbsp;     */
+&nbsp;    public void setNom(String nom) {
+<b class="fc">&nbsp;        this.nom = nom;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Sets the hashed password.
+&nbsp;     *
+&nbsp;     * @param motDePasseHash the password hash to set
+&nbsp;     */
+&nbsp;    public void setMotDePasseHash(String motDePasseHash) {
+<b class="fc">&nbsp;        this.motDePasseHash = motDePasseHash;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Sets the list of roles.
+&nbsp;     *
+&nbsp;     * @param roles the list of roles to set
+&nbsp;     */
+&nbsp;    public void setRoles(List&lt;String&gt; roles) {
+<b class="fc">&nbsp;        this.roles = roles;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns a string representation of the user.
+&nbsp;     *
+&nbsp;     * @return the string representation
+&nbsp;     */
+&nbsp;    public String toString() {
+<b class="fc">&nbsp;        return &quot;UserEntity(id=&quot; + this.getId() + &quot;, nom=&quot; + this.getNom() + &quot;, motDePasseHash=&quot; + this.getMotDePasseHash() + &quot;, roles=&quot; + this.getRoles() + &quot;)&quot;;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

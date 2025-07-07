@@ -1,0 +1,236 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > AvisEntity</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.entity</a>
+</div>
+
+<h1>Coverage Summary for Class: AvisEntity (org.nejjari.hanae.gameup.entity)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AvisEntity</td>
+<td class="coverageStat">
+  <span class="percent">
+    88,9%
+  </span>
+  <span class="absValue">
+    (8/9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    91,7%
+  </span>
+  <span class="absValue">
+    (11/12)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">AvisEntity$HibernateInstantiator</td>
+  </tr>
+  <tr>
+    <td class="name">AvisEntity$HibernateProxy</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    88,9%
+  </span>
+  <span class="absValue">
+    (8/9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    91,7%
+  </span>
+  <span class="absValue">
+    (11/12)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.entity;
+&nbsp;
+&nbsp;import jakarta.persistence.Entity;
+&nbsp;import jakarta.persistence.GeneratedValue;
+&nbsp;import jakarta.persistence.GenerationType;
+&nbsp;import jakarta.persistence.Id;
+&nbsp;import lombok.NoArgsConstructor;
+&nbsp;import org.nejjari.hanae.gameup.entity.base.SuperEntity;
+&nbsp;
+&nbsp;/**
+&nbsp; * Entity representing a review (Avis) in the system.
+&nbsp; */
+&nbsp;@Entity
+&nbsp;@NoArgsConstructor
+&nbsp;public class AvisEntity extends SuperEntity {
+&nbsp;	/**
+&nbsp;	 * The comment of the review.
+&nbsp;	 */
+&nbsp;	private String commentaire;
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * The rating of the review.
+&nbsp;	 */
+&nbsp;	private Integer note;
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns the identifier of the review.
+&nbsp;	 *
+&nbsp;	 * @return the id
+&nbsp;	 */
+&nbsp;	@Override
+&nbsp;	public Long getIdentifier() {
+<b class="fc">&nbsp;		return id;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Constructs an AvisEntity with the specified id, comment, and rating.
+&nbsp;	 *
+&nbsp;	 * @param id           the unique identifier
+&nbsp;	 * @param commentaire  the comment
+&nbsp;	 * @param note         the rating
+&nbsp;	 */
+<b class="fc">&nbsp;	public AvisEntity(Long id, String commentaire, Integer note) {</b>
+<b class="fc">&nbsp;		this.id = id;</b>
+<b class="fc">&nbsp;		this.commentaire = commentaire;</b>
+<b class="fc">&nbsp;		this.note = note;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns the id of the review.
+&nbsp;	 *
+&nbsp;	 * @return the id
+&nbsp;	 */
+&nbsp;	public Long getId() {
+<b class="fc">&nbsp;		return this.id;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns the comment of the review.
+&nbsp;	 *
+&nbsp;	 * @return the comment
+&nbsp;	 */
+&nbsp;	public String getCommentaire() {
+<b class="fc">&nbsp;		return this.commentaire;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns the rating of the review.
+&nbsp;	 *
+&nbsp;	 * @return the rating
+&nbsp;	 */
+&nbsp;	public Integer getNote() {
+<b class="fc">&nbsp;		return this.note;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Sets the id of the review.
+&nbsp;	 *
+&nbsp;	 * @param id the id to set
+&nbsp;	 */
+&nbsp;	public void setId(Long id) {
+<b class="fc">&nbsp;		this.id = id;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Sets the comment of the review.
+&nbsp;	 *
+&nbsp;	 * @param commentaire the comment to set
+&nbsp;	 */
+&nbsp;	public void setCommentaire(String commentaire) {
+<b class="fc">&nbsp;		this.commentaire = commentaire;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Sets the rating of the review.
+&nbsp;	 *
+&nbsp;	 * @param note the rating to set
+&nbsp;	 */
+&nbsp;	public void setNote(Integer note) {
+<b class="nc">&nbsp;		this.note = note;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Checks if this object is equal to another.
+&nbsp;	 *
+&nbsp;	 * @param o the other object
+&nbsp;	 * @return true if equal, false otherwise
+&nbsp;	 */
+&nbsp;
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Returns a string representation of the review.
+&nbsp;	 *
+&nbsp;	 * @return the string representation
+&nbsp;	 */
+&nbsp;	public String toString() {
+<b class="fc">&nbsp;		return &quot;AvisEntity(id=&quot; + this.getId() + &quot;, commentaire=&quot; + this.getCommentaire() + &quot;, note=&quot; + this.getNote() + &quot;)&quot;;</b>
+&nbsp;	}
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

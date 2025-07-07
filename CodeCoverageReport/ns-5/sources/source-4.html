@@ -1,0 +1,244 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > GameEntity</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.nejjari.hanae.gameup.entity</a>
+</div>
+
+<h1>Coverage Summary for Class: GameEntity (org.nejjari.hanae.gameup.entity)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">GameEntity</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (15/15)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (22/22)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">GameEntity$HibernateInstantiator</td>
+  </tr>
+  <tr>
+    <td class="name">GameEntity$HibernateProxy</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (15/15)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (22/22)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.nejjari.hanae.gameup.entity;
+&nbsp;
+&nbsp;import jakarta.persistence.*;
+&nbsp;import lombok.NoArgsConstructor;
+&nbsp;import org.nejjari.hanae.gameup.entity.base.SuperEntity;
+&nbsp;
+&nbsp;/**
+&nbsp; * Entity representing a game in the system.
+&nbsp; */
+&nbsp;@NoArgsConstructor
+&nbsp;@Entity
+&nbsp;public class GameEntity extends SuperEntity {
+&nbsp;    /**
+&nbsp;     * The name of the game.
+&nbsp;     */
+&nbsp;    private String nom;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The author of the game.
+&nbsp;     */
+&nbsp;    private String auteur;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The genre of the game.
+&nbsp;     */
+&nbsp;    private String genre;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The category of the game.
+&nbsp;     */
+&nbsp;    @ManyToOne(fetch = FetchType.EAGER)
+&nbsp;    @JoinColumn(name = &quot;category_id&quot;)
+&nbsp;    private CategoryEntity category;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The publisher of the game.
+&nbsp;     */
+&nbsp;    @ManyToOne(fetch = FetchType.EAGER)
+&nbsp;    @JoinColumn(name = &quot;publisher_id&quot;)
+&nbsp;    private PublisherEntity publisher;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The edition number of the game.
+&nbsp;     */
+&nbsp;    private String numEdition;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Returns the identifier of the game.
+&nbsp;     *
+&nbsp;     * @return the id
+&nbsp;     */
+&nbsp;    @Override
+&nbsp;    public Long getIdentifier() {
+<b class="fc">&nbsp;        return id;</b>
+&nbsp;    }
+&nbsp;
+<b class="fc">&nbsp;    public GameEntity(Long id,String nom, String auteur, String genre, CategoryEntity category, PublisherEntity publisher, String numEdition) {</b>
+<b class="fc">&nbsp;        super.id = id;</b>
+<b class="fc">&nbsp;        this.nom = nom;</b>
+<b class="fc">&nbsp;        this.auteur = auteur;</b>
+<b class="fc">&nbsp;        this.genre = genre;</b>
+<b class="fc">&nbsp;        this.category = category;</b>
+<b class="fc">&nbsp;        this.publisher = publisher;</b>
+<b class="fc">&nbsp;        this.numEdition = numEdition;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public String getNom() {
+<b class="fc">&nbsp;        return nom;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setNom(String nom) {
+<b class="fc">&nbsp;        this.nom = nom;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public String getAuteur() {
+<b class="fc">&nbsp;        return auteur;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setAuteur(String auteur) {
+<b class="fc">&nbsp;        this.auteur = auteur;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public String getGenre() {
+<b class="fc">&nbsp;        return genre;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setGenre(String genre) {
+<b class="fc">&nbsp;        this.genre = genre;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public CategoryEntity getCategory() {
+<b class="fc">&nbsp;        return category;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setCategory(CategoryEntity category) {
+<b class="fc">&nbsp;        this.category = category;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public PublisherEntity getPublisher() {
+<b class="fc">&nbsp;        return publisher;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setPublisher(PublisherEntity publisher) {
+<b class="fc">&nbsp;        this.publisher = publisher;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public String getNumEdition() {
+<b class="fc">&nbsp;        return numEdition;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setNumEdition(String numEdition) {
+<b class="fc">&nbsp;        this.numEdition = numEdition;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public String toString() {
+<b class="fc">&nbsp;        return &quot;GameEntity{&quot; +</b>
+&nbsp;                &quot;nom=&#39;&quot; + nom + &#39;\&#39;&#39; +
+&nbsp;                &quot;, auteur=&#39;&quot; + auteur + &#39;\&#39;&#39; +
+&nbsp;                &quot;, genre=&#39;&quot; + genre + &#39;\&#39;&#39; +
+&nbsp;                &quot;, category=&quot; + category +
+&nbsp;                &quot;, publisher=&quot; + publisher +
+&nbsp;                &quot;, numEdition=&#39;&quot; + numEdition + &#39;\&#39;&#39; +
+&nbsp;                &quot;, id=&quot; + id +
+&nbsp;                &#39;}&#39;;
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-07-07 17:15</div>
+</div>
+</body>
+</html>

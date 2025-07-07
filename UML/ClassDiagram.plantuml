@@ -1,0 +1,736 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class AbstractWireMockGameServiceToFastApiTest {
+  + AbstractWireMockGameServiceToFastApiTest(): 
+  ~ overrideProperties(DynamicPropertyRegistry): void
+  + init(): void
+  + teardown(): void
+}
+entity AuthorDto << record >> {
+  + AuthorDto(Long, String, List<GameDto>): 
+  + name(): String
+  + id(): Long
+  + games(): List<GameDto>
+   identifier: Long
+}
+class AuthorEntity {
+  + AuthorEntity(Long, String, List<GameEntity>): 
+  + AuthorEntity(): 
+  - games: List<GameEntity>
+  - name: String
+  + toString(): String
+   name: String
+   identifier: Long
+   games: List<GameEntity>
+   id: Long
+}
+interface AuthorMapper << interface >>
+interface AuthorRepository << interface >>
+class AuthorRepositoryTest {
+  + AuthorRepositoryTest(AuthorRepository): 
+  + testAccessors(): void
+  + testCRUD(): void
+  + createEntity(): AuthorEntity
+}
+class AuthorRestController {
+  # AuthorRestController(AuthorService): 
+}
+class AuthorRestControllerTest {
+  + AuthorRestControllerTest(): 
+  # defineDTO(): void
+  # defineClassDTO(): void
+  # newForChangesFromTo(AuthorDto): AuthorDto
+   basePath: String
+}
+class AuthorService {
+  + AuthorService(AuthorRepository, AuthorMapper): 
+}
+class AuthorServiceTest {
+  + AuthorServiceTest(AuthorService): 
+  + initDTO(): void
+}
+entity AvisDto << record >> {
+  + AvisDto(Long, String, Integer): 
+  + note(): Integer
+  + commentaire(): String
+  + id(): Long
+   identifier: Long
+}
+class AvisEntity {
+  + AvisEntity(): 
+  + AvisEntity(Long, String, Integer): 
+  - commentaire: String
+  - note: Integer
+  + toString(): String
+   identifier: Long
+   commentaire: String
+   note: Integer
+   id: Long
+}
+interface AvisMapper << interface >>
+interface AvisRepository << interface >>
+class AvisRepositoryTest {
+  + AvisRepositoryTest(AvisRepository): 
+  + testCRUD(): void
+  + testAccessors(): void
+  + createEntity(): AvisEntity
+}
+class AvisRestController {
+  # AvisRestController(AvisService): 
+}
+class AvisRestControllerTest {
+  + AvisRestControllerTest(): 
+  # defineClassDTO(): void
+  # defineDTO(): void
+  # newForChangesFromTo(AvisDto): AvisDto
+   basePath: String
+}
+class AvisService {
+  + AvisService(AvisRepository, AvisMapper): 
+}
+class AvisServiceTest {
+  + AvisServiceTest(AvisService): 
+  + initDTO(): void
+}
+entity CategoryDto << record >> {
+  + CategoryDto(Long, String): 
+  + id(): Long
+  + type(): String
+   identifier: Long
+}
+class CategoryEntity {
+  + CategoryEntity(): 
+  + CategoryEntity(Long, String): 
+  - type: String
+  + toString(): String
+   id: Long
+   identifier: Long
+   type: String
+}
+interface CategoryMapper << interface >>
+interface CategoryRepository << interface >>
+class CategoryRepositoryTest {
+  + CategoryRepositoryTest(CategoryRepository): 
+  + testAccessors(): void
+  + testCRUD(): void
+  + createEntity(): CategoryEntity
+}
+class CategoryRestController {
+  # CategoryRestController(CategoryService): 
+}
+class CategoryRestControllerTest {
+  + CategoryRestControllerTest(): 
+  # defineClassDTO(): void
+  # defineDTO(): void
+  # newForChangesFromTo(CategoryDto): CategoryDto
+   basePath: String
+}
+class CategoryService {
+  + CategoryService(CategoryRepository, CategoryMapper): 
+}
+class CategoryServiceTest {
+  + CategoryServiceTest(CategoryService): 
+  + initDTO(): void
+}
+entity GameDto << record >> {
+  + GameDto(Long, String, String, String, CategoryDto, PublisherDto, String): 
+  + publisher(): PublisherDto
+  + genre(): String
+  + auteur(): String
+  + category(): CategoryDto
+  + numEdition(): String
+  + id(): Long
+  + nom(): String
+   identifier: Long
+}
+class GameEntity {
+  + GameEntity(): 
+  + GameEntity(Long, String, String, String, CategoryEntity, PublisherEntity, String): 
+  - nom: String
+  - genre: String
+  - publisher: PublisherEntity
+  - numEdition: String
+  - auteur: String
+  - category: CategoryEntity
+  + toString(): String
+   category: CategoryEntity
+   identifier: Long
+   nom: String
+   publisher: PublisherEntity
+   numEdition: String
+   genre: String
+   auteur: String
+}
+interface GameMapper << interface >>
+entity GameRecommendationDto << record >> {
+  + GameRecommendationDto(Long, Double): 
+  + compareTo(Double): int
+  + game_id(): Long
+  + estimated_score(): Double
+   identifier: Long
+}
+entity GameRecommendationsDto << record >> {
+  + GameRecommendationsDto(List<GameRecommendationDto>): 
+  + recommendations(): List<GameRecommendationDto>
+}
+interface GameRepository << interface >> {
+  + distinctSearchByNomOrGenreOrNumEditionOrAuteurOrCategoryTypeOrPublisherName(String, String, String, String, String, String): Set<GameEntity>
+}
+class GameRepositoryTest {
+  + GameRepositoryTest(GameRepository): 
+  + createEntity(): GameEntity
+  + testAccessors(): void
+  + testCRUD(): void
+}
+class GameRestController {
+  # GameRestController(GameService): 
+  + distinctSearchByNomOrGenreOrNumEditionOrAuteurOrCategoryTypeOrPublisherName(String, String, String, String, String, String): Set<GameDto>
+   recommandedGameByAI: Set<GameDto>
+}
+class GameRestControllerTest {
+  + GameRestControllerTest(): 
+  # defineDTO(): void
+  # newForChangesFromTo(GameDto): GameDto
+  + testRecommendations(): void
+  + testSearch(): void
+  # defineClassDTO(): void
+   basePath: String
+}
+class GameService {
+  + GameService(GameRepository, GameMapper, RestTemplateBuilder): 
+  - training(): void
+  + distinctSearchByNomOrGenreOrNumEditionOrAuteurOrCategoryTypeOrPublisherName(String, String, String, String, String, String): Set<GameDto>
+   recommandedGameByAIWithFastAPI: Set<GameDto>
+}
+class GameServiceTest {
+  + GameServiceTest(GameService): 
+  + initDTO(): void
+  + testGetRecommendedGames(): void
+}
+class GameUpApplication {
+  + GameUpApplication(): 
+  + main(String[]): void
+}
+class GameUpApplicationTests {
+  + GameUpApplicationTests(): 
+  ~ contextLoads(): void
+}
+class GrantedAuthorityImpl {
+  + GrantedAuthorityImpl(String): 
+  - authority: String
+   authority: String
+}
+entity InventoryDto << record >> {
+  + InventoryDto(Long, Map<GameDto, Integer>): 
+  + id(): Long
+  + stock(): Map<GameDto, Integer>
+   identifier: Long
+}
+class InventoryEntity {
+  + InventoryEntity(): 
+  + InventoryEntity(Long, Map<GameEntity, Integer>): 
+  - stock: Map<GameEntity, Integer>
+  + toString(): String
+   id: Long
+   identifier: Long
+   stock: Map<GameEntity, Integer>
+}
+interface InventoryMapper << interface >>
+interface InventoryRepository << interface >>
+class InventoryRepositoryTest {
+  + InventoryRepositoryTest(InventoryRepository, GameRepository): 
+  + testAccessors(): void
+  + createEntity(): InventoryEntity
+  + testCRUD(): void
+}
+class InventoryRestController {
+  # InventoryRestController(InventoryService): 
+}
+class InventoryService {
+  + InventoryService(InventoryRepository, InventoryMapper): 
+}
+class InventoryServiceTest {
+  + InventoryServiceTest(InventoryService): 
+  + initDTO(): void
+}
+entity PublisherDto << record >> {
+  + PublisherDto(Long, String): 
+  + id(): Long
+  + name(): String
+   identifier: Long
+}
+class PublisherEntity {
+  + PublisherEntity(): 
+  + PublisherEntity(Long, String): 
+  - name: String
+  + toString(): String
+   name: String
+   id: Long
+   identifier: Long
+}
+interface PublisherMapper << interface >>
+interface PublisherRepository << interface >>
+class PublisherRepositoryTest {
+  + PublisherRepositoryTest(PublisherRepository): 
+  + testCRUD(): void
+  + createEntity(): PublisherEntity
+  + testAccessors(): void
+}
+class PublisherRestController {
+  # PublisherRestController(PublisherService): 
+}
+class PublisherRestControllerTest {
+  + PublisherRestControllerTest(): 
+  # defineDTO(): void
+  # newForChangesFromTo(PublisherDto): PublisherDto
+  # defineClassDTO(): void
+   basePath: String
+}
+class PublisherService {
+  + PublisherService(PublisherRepository, PublisherMapper): 
+}
+class PublisherServiceTest {
+  + PublisherServiceTest(PublisherService): 
+  + initDTO(): void
+}
+entity PurchaseDto << record >> {
+  + PurchaseDto(Long, List<PurchaseLineDto>, LocalDate, Boolean, Boolean, Boolean): 
+  + date(): LocalDate
+  + archived(): Boolean
+  + line(): List<PurchaseLineDto>
+  + delivered(): Boolean
+  + paid(): Boolean
+  + id(): Long
+   identifier: Long
+}
+class PurchaseEntity {
+  + PurchaseEntity(): 
+  + PurchaseEntity(Long, List<PurchaseLineEntity>, LocalDate, boolean, boolean, boolean): 
+  - line: List<PurchaseLineEntity>
+  - delivered: boolean
+  - date: LocalDate
+  - paid: boolean
+  - archived: boolean
+  + toString(): String
+   archived: boolean
+   identifier: Long
+   id: Long
+   date: LocalDate
+   delivered: boolean
+   line: List<PurchaseLineEntity>
+   paid: boolean
+}
+entity PurchaseLineDto << record >> {
+  + PurchaseLineDto(Long, Long, Long, Double): 
+  + prix(): Double
+  + utilisateurId(): Long
+  + id(): Long
+  + jeuId(): Long
+   identifier: Long
+}
+class PurchaseLineEntity {
+  + PurchaseLineEntity(): 
+  + PurchaseLineEntity(Long, Long, Long, Double): 
+  - utilisateurId: Long
+  - prix: Double
+  - jeuId: Long
+  + toString(): String
+   identifier: Long
+   jeuId: Long
+   prix: Double
+   id: Long
+   utilisateurId: Long
+}
+interface PurchaseLineMapper << interface >>
+interface PurchaseLineRepository << interface >>
+class PurchaseLineRepositoryTest {
+  + PurchaseLineRepositoryTest(PurchaseLineRepository): 
+  + testAccessors(): void
+  + createEntity(): PurchaseLineEntity
+  + testCRUD(): void
+}
+class PurchaseLineRestController {
+  # PurchaseLineRestController(PurchaseLineService): 
+}
+class PurchaseLineRestControllerTest {
+  + PurchaseLineRestControllerTest(): 
+  # newForChangesFromTo(PurchaseLineDto): PurchaseLineDto
+  # defineClassDTO(): void
+  # defineDTO(): void
+   basePath: String
+}
+class PurchaseLineService {
+  + PurchaseLineService(PurchaseLineRepository, PurchaseLineMapper): 
+}
+class PurchaseLineServiceTest {
+  + PurchaseLineServiceTest(PurchaseLineService): 
+  + initDTO(): void
+}
+interface PurchaseMapper << interface >>
+interface PurchaseRepository << interface >>
+class PurchaseRepositoryTest {
+  + PurchaseRepositoryTest(PurchaseRepository): 
+  + testAccessors(): void
+  + createEntity(): PurchaseEntity
+  + testCRUD(): void
+}
+class PurchaseRestController {
+  # PurchaseRestController(PurchaseService): 
+}
+class PurchaseRestControllerTest {
+  + PurchaseRestControllerTest(): 
+  # defineClassDTO(): void
+  # newForChangesFromTo(PurchaseDto): PurchaseDto
+  # defineDTO(): void
+   basePath: String
+}
+class PurchaseService {
+  + PurchaseService(PurchaseRepository, PurchaseMapper): 
+}
+class PurchaseServiceTest {
+  + PurchaseServiceTest(PurchaseService): 
+  + initDTO(): void
+}
+class SecurityConfig {
+  + SecurityConfig(): 
+  + passwordEncoder(): PasswordEncoder
+  + securityFilterChain(HttpSecurity): SecurityFilterChain
+}
+class SuperAbstractRestControllerTest<DTO> {
+  + SuperAbstractRestControllerTest(): 
+  # setUp(): void
+  + testUpdateByPut(): void
+  # newForChangesFromTo(DTO): DTO
+  # defineUrl(): void
+  + testSave(): void
+  + testFindById(): void
+  # defineDTO(): void
+  + testUpdateByPatch(): void
+  # defineClassDTO(): void
+  + testFindAll(): void
+   basePath: String
+}
+interface SuperDto << interface >> {
+   identifier: Long
+}
+class SuperEntity {
+  + SuperEntity(Long, LocalDateTime, LocalDateTime): 
+  + SuperEntity(): 
+  # id: Long
+  - createdAt: LocalDateTime
+  - updatedAt: LocalDateTime
+  - init(): void
+  - update(): void
+   updatedAt: LocalDateTime
+   identifier: Long
+   createdAt: LocalDateTime
+   id: Long
+}
+interface SuperMapper<Dto, Entity> << interface >> {
+  + toEntity(Dto): Entity
+  + toDto(Entity): Dto
+}
+interface SuperRepository<T> << interface >>
+class SuperRepositoryTest<REPOSITORY, ENTITY> {
+  + SuperRepositoryTest(REPOSITORY): 
+  + testAccessors(): void
+  + testCRUD(): void
+  + createEntity(): ENTITY
+}
+class SuperRestController<DTO, S> {
+  # SuperRestController(S): 
+  + updateByPut(DTO): DTO
+  + save(DTO): DTO
+  + findAll(): List<DTO>
+  - saveAndReturnModifiedDTO(DTO): DTO
+  + deleteByDTO(Long): DTO
+  + findById(Long): DTO
+  + updateByPatch(DTO): DTO
+}
+class SuperService<K, V, T, M> {
+  + SuperService(T, M): 
+  + findAllById(List<Long>): List<V>
+  + findById(Long): V
+  + findAll(): List<V>
+  + saveOrUpdate(V): V
+  + saveOrUpdateAll(List<V>): List<V>
+  + deleteById(Long): void
+}
+class SuperServiceTest<DTO, S> {
+  + SuperServiceTest(S): 
+  + testDeleteById(): void
+  + testFindAllById(): void
+  + testFindById(): void
+  + initDTO(): void
+  + testFindAll(): void
+  + testSaveOrUpdate(): void
+  + testSaveOrUpdateAll(): void
+}
+entity UserDto << record >> {
+  + UserDto(Long, String, String, List<String>): 
+  + motDePasseHash(): String
+  + roles(): List<String>
+  + nom(): String
+  + id(): Long
+   identifier: Long
+}
+class UserEntity {
+  + UserEntity(): 
+  + UserEntity(Long, String, String, List<String>): 
+  - motDePasseHash: String
+  - nom: String
+  - roles: List<String>
+  + toString(): String
+   password: String
+   identifier: Long
+   id: Long
+   authorities: Collection<GrantedAuthority>
+   nom: String
+   roles: List<String>
+   username: String
+   motDePasseHash: String
+}
+interface UserMapper << interface >>
+interface UserRepository << interface >> {
+  + findByNom(String): UserEntity
+  + findByIdIn(List<Long>): List<UserEntity>
+  + existsByNom(String): Boolean
+}
+class UserRepositoryTest {
+  + UserRepositoryTest(UserRepository): 
+  ~ findByIdIn(): void
+  + testAccessors(): void
+  + testCRUD(): void
+  ~ existsByNom(): void
+  + createEntity(): UserEntity
+  ~ findByNom(): void
+}
+class UserRestController {
+  # UserRestController(UserService): 
+  + verifyLogin(UserDto): Boolean
+  + existByNom(String): Boolean
+  + getUserByNom(String): UserDto
+}
+class UserRestControllerTest {
+  + UserRestControllerTest(): 
+  + testExistByNom(): void
+  # newForChangesFromTo(UserDto): UserDto
+  # defineClassDTO(): void
+  # defineDTO(): void
+  + testUpdateByPatch(): void
+  + testUpdateByPut(): void
+  + testGetUserByNom(): void
+  + testVerifyByLogin(): void
+   basePath: String
+}
+class UserService {
+  + UserService(UserRepository, UserMapper, PasswordEncoder): 
+  + saveOrUpdate(UserDto): UserDto
+  + existByNom(String): Boolean
+  + loadUserByUsername(String): UserDetails
+  + init(): void
+  + findByNom(String): UserDto
+  + verifyLogin(UserDto): Boolean
+}
+class UserServiceTest {
+  + UserServiceTest(UserService): 
+  + testDeleteById(): void
+  + testFindByNom(): void
+  + testVerifyLogin(): void
+  + testExistByNom(): void
+  + initDTO(): void
+  + testSaveOrUpdate(): void
+  + testFindById(): void
+}
+entity WishlistDto << record >> {
+  + WishlistDto(Long, List<String>): 
+  + id(): Long
+  + wishes(): List<String>
+   identifier: Long
+}
+class WishlistEntity {
+  + WishlistEntity(): 
+  + WishlistEntity(Long, List<String>): 
+  - wishes: List<String>
+  + toString(): String
+   id: Long
+   identifier: Long
+   wishes: List<String>
+}
+interface WishlistMapper << interface >>
+interface WishlistRepository << interface >>
+class WishlistRepositoryTest {
+  + WishlistRepositoryTest(WishlistRepository): 
+  + createEntity(): WishlistEntity
+  + testAccessors(): void
+  + testCRUD(): void
+}
+class WishlistRestController {
+  # WishlistRestController(WishlistService): 
+}
+class WishlistRestControllerTest {
+  + WishlistRestControllerTest(): 
+  # defineDTO(): void
+  # newForChangesFromTo(WishlistDto): WishlistDto
+  # defineClassDTO(): void
+   basePath: String
+}
+class WishlistService {
+  + WishlistService(WishlistRepository, WishlistMapper): 
+}
+class WishlistServiceTest {
+  + WishlistServiceTest(WishlistService): 
+  + initDTO(): void
+}
+
+AuthorDto                                 -[#008200,dashed]-^  SuperDto                                 
+AuthorEntity                             "1" *-[#595959,plain]-> "games\n*" GameEntity                               
+AuthorEntity                              -[#000082,plain]-^  SuperEntity                              
+AuthorMapper                              -[#008200,plain]-^  SuperMapper                              
+AuthorRepository                          -[#008200,plain]-^  SuperRepository                          
+AuthorRepositoryTest                      -[#595959,dashed]->  AuthorEntity                             : "«create»"
+AuthorRepositoryTest                      -[#000082,plain]-^  SuperRepositoryTest                      
+AuthorRestController                      -[#000082,plain]-^  SuperRestController                      
+AuthorRestControllerTest                  -[#595959,dashed]->  AuthorDto                                : "«create»"
+AuthorRestControllerTest                  -[#000082,plain]-^  SuperAbstractRestControllerTest          
+AuthorService                             -[#000082,plain]-^  SuperService                             
+AuthorServiceTest                         -[#595959,dashed]->  AuthorDto                                : "«create»"
+AuthorServiceTest                         -[#000082,plain]-^  SuperServiceTest                         
+AvisDto                                   -[#008200,dashed]-^  SuperDto                                 
+AvisEntity                                -[#000082,plain]-^  SuperEntity                              
+AvisMapper                                -[#008200,plain]-^  SuperMapper                              
+AvisRepository                            -[#008200,plain]-^  SuperRepository                          
+AvisRepositoryTest                        -[#595959,dashed]->  AvisEntity                               : "«create»"
+AvisRepositoryTest                        -[#000082,plain]-^  SuperRepositoryTest                      
+AvisRestController                        -[#000082,plain]-^  SuperRestController                      
+AvisRestControllerTest                    -[#595959,dashed]->  AvisDto                                  : "«create»"
+AvisRestControllerTest                    -[#000082,plain]-^  SuperAbstractRestControllerTest          
+AvisService                               -[#000082,plain]-^  SuperService                             
+AvisServiceTest                           -[#595959,dashed]->  AvisDto                                  : "«create»"
+AvisServiceTest                           -[#000082,plain]-^  SuperServiceTest                         
+CategoryDto                               -[#008200,dashed]-^  SuperDto                                 
+CategoryEntity                            -[#000082,plain]-^  SuperEntity                              
+CategoryMapper                            -[#008200,plain]-^  SuperMapper                              
+CategoryRepository                        -[#008200,plain]-^  SuperRepository                          
+CategoryRepositoryTest                    -[#595959,dashed]->  CategoryEntity                           : "«create»"
+CategoryRepositoryTest                    -[#000082,plain]-^  SuperRepositoryTest                      
+CategoryRestController                    -[#000082,plain]-^  SuperRestController                      
+CategoryRestControllerTest                -[#595959,dashed]->  CategoryDto                              : "«create»"
+CategoryRestControllerTest                -[#000082,plain]-^  SuperAbstractRestControllerTest          
+CategoryService                           -[#000082,plain]-^  SuperService                             
+CategoryServiceTest                       -[#595959,dashed]->  CategoryDto                              : "«create»"
+CategoryServiceTest                       -[#000082,plain]-^  SuperServiceTest                         
+GameDto                                   -[#008200,dashed]-^  SuperDto                                 
+GameEntity                               "1" *-[#595959,plain]-> "category\n1" CategoryEntity                           
+GameEntity                               "1" *-[#595959,plain]-> "publisher\n1" PublisherEntity                          
+GameEntity                                -[#000082,plain]-^  SuperEntity                              
+GameMapper                                -[#008200,plain]-^  SuperMapper                              
+GameRecommendationDto                     -[#008200,dashed]-^  SuperDto                                 
+GameRecommendationsDto                   "1" *-[#595959,plain]-> "recommendations\n*" GameRecommendationDto                    
+GameRepository                            -[#008200,plain]-^  SuperRepository                          
+GameRepositoryTest                        -[#595959,dashed]->  GameEntity                               : "«create»"
+GameRepositoryTest                        -[#000082,plain]-^  SuperRepositoryTest                      
+GameRestController                        -[#000082,plain]-^  SuperRestController                      
+GameRestControllerTest                    -[#595959,dashed]->  GameDto                                  : "«create»"
+GameRestControllerTest                    -[#000082,plain]-^  SuperAbstractRestControllerTest          
+GameService                               -[#595959,dashed]->  GameEntity                               : "«create»"
+GameService                               -[#000082,plain]-^  SuperService                             
+GameServiceTest                           -[#595959,dashed]->  GameDto                                  : "«create»"
+GameServiceTest                           -[#000082,plain]-^  SuperServiceTest                         
+GameUpApplicationTests                    -[#000082,plain]-^  AbstractWireMockGameServiceToFastApiTest 
+InventoryDto                              -[#008200,dashed]-^  SuperDto                                 
+InventoryEntity                          "1" *-[#595959,plain]-> "stock\n*" GameEntity                               
+InventoryEntity                           -[#000082,plain]-^  SuperEntity                              
+InventoryMapper                           -[#008200,plain]-^  SuperMapper                              
+InventoryRepository                       -[#008200,plain]-^  SuperRepository                          
+InventoryRepositoryTest                   -[#595959,dashed]->  GameEntity                               : "«create»"
+InventoryRepositoryTest                  "1" *-[#595959,plain]-> "gameRepository\n1" GameRepository                           
+InventoryRepositoryTest                   -[#595959,dashed]->  InventoryEntity                          : "«create»"
+InventoryRepositoryTest                   -[#000082,plain]-^  SuperRepositoryTest                      
+InventoryRestController                   -[#000082,plain]-^  SuperRestController                      
+InventoryService                          -[#000082,plain]-^  SuperService                             
+InventoryServiceTest                      -[#595959,dashed]->  InventoryDto                             : "«create»"
+InventoryServiceTest                      -[#000082,plain]-^  SuperServiceTest                         
+PublisherDto                              -[#008200,dashed]-^  SuperDto                                 
+PublisherEntity                           -[#000082,plain]-^  SuperEntity                              
+PublisherMapper                           -[#008200,plain]-^  SuperMapper                              
+PublisherRepository                       -[#008200,plain]-^  SuperRepository                          
+PublisherRepositoryTest                   -[#595959,dashed]->  PublisherEntity                          : "«create»"
+PublisherRepositoryTest                   -[#000082,plain]-^  SuperRepositoryTest                      
+PublisherRestController                   -[#000082,plain]-^  SuperRestController                      
+PublisherRestControllerTest               -[#595959,dashed]->  PublisherDto                             : "«create»"
+PublisherRestControllerTest               -[#000082,plain]-^  SuperAbstractRestControllerTest          
+PublisherService                          -[#000082,plain]-^  SuperService                             
+PublisherServiceTest                      -[#595959,dashed]->  PublisherDto                             : "«create»"
+PublisherServiceTest                      -[#000082,plain]-^  SuperServiceTest                         
+PurchaseDto                               -[#008200,dashed]-^  SuperDto                                 
+PurchaseEntity                           "1" *-[#595959,plain]-> "line\n*" PurchaseLineEntity                       
+PurchaseEntity                            -[#000082,plain]-^  SuperEntity                              
+PurchaseLineDto                           -[#008200,dashed]-^  SuperDto                                 
+PurchaseLineEntity                        -[#000082,plain]-^  SuperEntity                              
+PurchaseLineMapper                        -[#008200,plain]-^  SuperMapper                              
+PurchaseLineRepository                    -[#008200,plain]-^  SuperRepository                          
+PurchaseLineRepositoryTest                -[#595959,dashed]->  PurchaseLineEntity                       : "«create»"
+PurchaseLineRepositoryTest                -[#000082,plain]-^  SuperRepositoryTest                      
+PurchaseLineRestController                -[#000082,plain]-^  SuperRestController                      
+PurchaseLineRestControllerTest            -[#595959,dashed]->  PurchaseLineDto                          : "«create»"
+PurchaseLineRestControllerTest            -[#000082,plain]-^  SuperAbstractRestControllerTest          
+PurchaseLineService                       -[#000082,plain]-^  SuperService                             
+PurchaseLineServiceTest                   -[#595959,dashed]->  PurchaseLineDto                          : "«create»"
+PurchaseLineServiceTest                   -[#000082,plain]-^  SuperServiceTest                         
+PurchaseMapper                            -[#008200,plain]-^  SuperMapper                              
+PurchaseRepository                        -[#008200,plain]-^  SuperRepository                          
+PurchaseRepositoryTest                    -[#595959,dashed]->  PurchaseEntity                           : "«create»"
+PurchaseRepositoryTest                    -[#000082,plain]-^  SuperRepositoryTest                      
+PurchaseRestController                    -[#000082,plain]-^  SuperRestController                      
+PurchaseRestControllerTest                -[#595959,dashed]->  PurchaseDto                              : "«create»"
+PurchaseRestControllerTest                -[#000082,plain]-^  SuperAbstractRestControllerTest          
+PurchaseService                           -[#000082,plain]-^  SuperService                             
+PurchaseServiceTest                       -[#595959,dashed]->  PurchaseDto                              : "«create»"
+PurchaseServiceTest                       -[#000082,plain]-^  SuperServiceTest                         
+SuperAbstractRestControllerTest           -[#000082,plain]-^  AbstractWireMockGameServiceToFastApiTest 
+SuperAbstractRestControllerTest           -[#595959,dashed]->  SuperDto                                 
+SuperMapper                               -[#595959,dashed]->  SuperDto                                 
+SuperMapper                               -[#595959,dashed]->  SuperEntity                              
+SuperRepository                           -[#595959,dashed]->  SuperEntity                              
+SuperRepositoryTest                       -[#000082,plain]-^  AbstractWireMockGameServiceToFastApiTest 
+SuperRepositoryTest                       -[#595959,dashed]->  SuperEntity                              
+SuperRestController                       -[#595959,dashed]->  SuperDto                                 
+SuperRestController                       -[#595959,dashed]->  SuperService                             
+SuperService                              -[#595959,dashed]->  SuperDto                                 
+SuperService                              -[#595959,dashed]->  SuperEntity                              
+SuperService                              -[#595959,dashed]->  SuperMapper                              
+SuperService                              -[#595959,dashed]->  SuperRepository                          
+SuperServiceTest                          -[#000082,plain]-^  AbstractWireMockGameServiceToFastApiTest 
+SuperServiceTest                          -[#595959,dashed]->  SuperDto                                 
+SuperServiceTest                          -[#595959,dashed]->  SuperService                             
+UserDto                                   -[#008200,dashed]-^  SuperDto                                 
+UserEntity                                -[#000082,plain]-^  SuperEntity                              
+UserMapper                                -[#008200,plain]-^  SuperMapper                              
+UserRepository                            -[#008200,plain]-^  SuperRepository                          
+UserRepositoryTest                        -[#000082,plain]-^  SuperRepositoryTest                      
+UserRepositoryTest                        -[#595959,dashed]->  UserEntity                               : "«create»"
+UserRestController                        -[#000082,plain]-^  SuperRestController                      
+UserRestControllerTest                    -[#000082,plain]-^  SuperAbstractRestControllerTest          
+UserRestControllerTest                    -[#595959,dashed]->  UserDto                                  : "«create»"
+UserService                               -[#000082,plain]-^  SuperService                             
+UserService                               -[#595959,dashed]->  UserDto                                  : "«create»"
+UserServiceTest                           -[#000082,plain]-^  SuperServiceTest                         
+UserServiceTest                           -[#595959,dashed]->  UserDto                                  : "«create»"
+WishlistDto                               -[#008200,dashed]-^  SuperDto                                 
+WishlistEntity                            -[#000082,plain]-^  SuperEntity                              
+WishlistMapper                            -[#008200,plain]-^  SuperMapper                              
+WishlistRepository                        -[#008200,plain]-^  SuperRepository                          
+WishlistRepositoryTest                    -[#000082,plain]-^  SuperRepositoryTest                      
+WishlistRepositoryTest                    -[#595959,dashed]->  WishlistEntity                           : "«create»"
+WishlistRestController                    -[#000082,plain]-^  SuperRestController                      
+WishlistRestControllerTest                -[#000082,plain]-^  SuperAbstractRestControllerTest          
+WishlistRestControllerTest                -[#595959,dashed]->  WishlistDto                              : "«create»"
+WishlistService                           -[#000082,plain]-^  SuperService                             
+WishlistServiceTest                       -[#000082,plain]-^  SuperServiceTest                         
+WishlistServiceTest                       -[#595959,dashed]->  WishlistDto                              : "«create»"
+@enduml
